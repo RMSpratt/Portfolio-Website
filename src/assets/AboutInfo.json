@@ -1,0 +1,64 @@
+{
+    "AboutParagraph": {
+        "Header": "QA Contractor & Game Developer",
+        "HeadingParagraphs": [
+            "Hello! My name is Reed Spratt, and I am a working professional in the computer games industry."
+        ],
+        "Subsections": [
+            {
+                "SubsectionHeader": "Research Interests",
+                "SubsectionParagraphs": [
+                    "- Realistic Character AI in Games",
+                    "- Collaborative Techniques for AI Agents",
+                    "- Game Design & Player UX Best Practices"
+                ]
+            },
+            {
+                "SubsectionHeader": "Project Interests",
+                "SubsectionParagraphs": [
+                    "- Designing Reusable AI Frameworks",
+                    "- Designing Reusable Game System Frameworks",
+                    "- Building Editor Tools for Unity",
+                    "- Building Plugins for Roblox",
+                    "- Implementing Dynamic Music in Games"
+                ]
+            }
+        ]
+    },
+    "AboutEducation": {
+        "Header": "Education",
+        "Subsections": [
+            {
+                "SubsectionHeader": "University of Guelph - BSc.",
+                "SubsectionParagraphs": [
+                    "I attended the University of Guelph from 2017-2021 majoring in Software Engineering, and minoring in Music.",
+                    ""
+                ]
+            },
+            {
+                "SubsectionHeader": "Western University - MSc.",
+                "SubsectionParagraphs": [
+                    "I attended Western University from 2021-2023, majoring in Computer Science."
+                ]
+            }
+        ]
+    },
+    "AboutExperience": {
+        "Header": "Experience",
+        "Subsections": [
+            {
+                "SubsectionHeader": "Supersocial - QA Tester",
+                "SubsectionParagraphs": [
+                    "I am currently employed at Supersocial as a QA Tester."
+                ]
+            }
+        ]
+    },
+    "AboutContact": {
+        "Header": "Contact",
+        "ImageName": "",
+        "ParagraphText": [
+            "<strong>Github:</strong> <a href=\"https://github.com/RMSpratt\">Github</a>"
+        ]
+    }
+}
