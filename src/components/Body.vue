@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AboutSection from './PageSections/AboutSection.vue';
+import AboutSection from './PageSections/AboutPage.vue';
 import RobloxSection from './PageSections/RobloxSection.vue';
 
     const props = defineProps(['activeSection'])

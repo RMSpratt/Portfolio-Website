@@ -1,0 +1,29 @@
+[
+    {
+        "Type": "TextSection",
+        "Header": "Contact Information",
+        "Subsections": [
+            {
+                "Type": "ImageSection",
+                "Image": "Pfp.jpg"
+            },
+            {
+                "Type": "LinkSection",
+                "LinkItems": [
+                    {
+                        "Id": "Github-Link",
+                        "Label": "Github",
+                        "Href": "https://github.com/RMSpratt",
+                        "LinkText": "https://github.com/RMSpratt"
+                    },
+                    {
+                        "Id": "LinkedIn-Link",
+                        "Label": "LinkedIn",
+                        "Href": "https://www.linkedin.com/in/reed-spratt-695818165/",
+                        "LinkText": "https://www.linkedin.com/in/reed-spratt-695818165/"
+                    }
+                ]
+            }
+        ]
+    }
+]
