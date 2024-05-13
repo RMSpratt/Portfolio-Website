@@ -1,14 +1,14 @@
 <script setup lang="ts">
-    import DescriptionBlock from './PageContent/DescriptionBlock.vue';
-    import SideTextBlock from './PageContent/SideTextBlock.vue';
-    import {AboutParagraph, AboutEducation, AboutExperience} from '../../assets/AboutInfo.json'
+import SideTextBlock from './PageContent/SideImageTextBlock.vue';
+
+import AboutInfo from '../../assets/AboutContent.json'
+import SectionBlock from './PageContent/SectionBlock.vue';
+
 </script>
 
 <template>
     <div class="page-section-main">
-        <DescriptionBlock :section-body="AboutParagraph"/>
-        <DescriptionBlock :section-body="AboutEducation"/>
-        <DescriptionBlock :section-body="AboutExperience"/>
+        <SectionBlock v-for="section in AboutInfo" :section-body="section"/>
     </div>
     <div class="page-section-side">
         <div class="page-section-block">
@@ -33,23 +33,4 @@
     </div>
 </template>
 <style lang="scss">
-
-    label {
-        display: block;
-        margin: 10px;
-
-        a, p {
-            display: inline-block;
-        }
-    }
-
-    img {
-        border-radius: 10%;
-        display: flex;
-        max-height: auto;
-        margin: 20px auto;
-        width: 50%;
-        max-width: 250px;
-    }
-
 </style>

@@ -1,0 +1,67 @@
+[
+    {
+        "Type": "TextSection",
+        "Header": "Software Engineer & Game Developer",
+        "HeadingParagraphs": [
+            "Hello! My name is Reed Spratt, and I am a working professional in the computer games industry."
+        ],
+        "FooterParagraphs": [
+            "A selection of my recent work can be found on the other pages linked above, or on my Github linked to the right."
+        ],
+        "Subsections": [
+            {
+                "Type": "ListSection",
+                "Header": "Research Interests",
+                "Items": [
+                    "Realistic Character AI in Games",
+                    "Collaborative Techniques for AI Agents",
+                    "Game Design & Player UX Best Practices"
+                ]
+            },
+            {
+                "Type": "ListSection",
+                "Header": "Project Interests",
+                "Items": [
+                    "Reusable Design of AI Frameworks",
+                    "Creation of Editor Tools for Unity",
+                    "Creation of Plugins for Roblox Studio",
+                    "Implementation of Dynamic Music in Games"
+                ]
+            }
+        ]
+    },
+    {
+        "Type": "TextSection",
+        "Header": "Education",
+        "Subsections": [
+            {
+                "Type": "TextSection",
+                "Header": "University of Guelph - BSc.",
+                "HeadingParagraphs": [
+                    "I attended the University of Guelph from 2017-2021 majoring in Software Engineering, and minoring in Music.",
+                    ""
+                ]
+            },
+            {
+                "Type": "TextSection",
+                "Header": "Western University - MSc.",
+                "HeadingParagraphs": [
+                    "I attended Western University from 2021-2023, majoring in Computer Science."
+                ]
+            }
+        ]
+    },
+    {
+        "Type": "TextSection",
+        "Header": "Experience",
+        "Subsections": [
+            {
+                "Type": "TextSection",
+                "Header": "Supersocial - QA Tester",
+                "HeadingParagraphs": [
+                    "I am currently employed at Supersocial as a QA Tester."
+                ]
+            }
+        ]
+    }
+]

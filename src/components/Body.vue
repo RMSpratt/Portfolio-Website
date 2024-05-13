@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import AboutSection from './PageSections/AboutSection.vue';
+import RobloxSection from './PageSections/RobloxSection.vue';
 
+    const props = defineProps(['activeSection'])
 </script>
 
 <template>
     <div id="page-section-full">
-        <AboutSection />
+        <AboutSection v-if="$props.activeSection === 0"/>
+        <RobloxSection v-else-if="$props.activeSection === 1"/>
     </div>
 </template>
 <style lang="scss">
