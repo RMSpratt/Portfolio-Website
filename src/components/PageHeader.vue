@@ -18,11 +18,10 @@ defineEmits(['setPageSection'])
   </div>
 </template>
 <style lang="scss">
-$pageColor-header: hsl(168.92, 73.71%, 41.76%);
-
 #header {
   align-items: center;
-  background-color: $pageColor-header;
+  background-color: $pageColor-medium;
+  box-shadow: 0 5px 5px $pageColor-dark;
   display: flex;
   height: 80px;
   padding: 10px;
@@ -40,11 +39,6 @@ $pageColor-header: hsl(168.92, 73.71%, 41.76%);
 
 #headerNav > div {
   width: 25%;
-
-  button {
-    background: none;
-    border: 0px;
-  }
 
   button:hover {
     cursor: pointer;

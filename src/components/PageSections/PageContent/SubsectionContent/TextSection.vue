@@ -3,6 +3,7 @@ import SubsectionHeader from './SubsectionHeader.vue'
 import ListSection from './ListSection.vue'
 import ImageSection from './ImageSection.vue'
 import LinkSection from './LinkSection.vue'
+
 import { ref } from 'vue'
 
 const props = defineProps(['sectionBody', 'headingLevel'])
@@ -40,6 +41,11 @@ let subsections: [...any] = props.sectionBody.Subsections || []
       />
       <LinkSection
         v-else-if="sp.Type == 'LinkSection'"
+        :section-body="sp"
+        :heading-level="headingLevel + 1"
+      />
+      <NavSection
+        v-else-if="sp.Type == 'NavSection'"
         :section-body="sp"
         :heading-level="headingLevel + 1"
       />

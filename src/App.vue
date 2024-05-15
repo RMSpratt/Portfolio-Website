@@ -30,13 +30,19 @@ function setCurrPage(newPage: string) {
 *,
 html {
   box-sizing: border-box;
+  font-size: 16px;
   font-family: 'nunito', sans-serif;
   margin: 0px;
   padding: 0px;
 }
 
 body {
-  background-color: $pageColor-lightest;
+  //   background-color: $pageColor-lightest;
+}
+
+button {
+  background: none;
+  border: 0px;
 }
 
 label {
@@ -54,6 +60,22 @@ h1,
 h2,
 h3 {
   color: $pageColor-darkest;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+em {
+  font-size: 0.9rem;
 }
 
 img {

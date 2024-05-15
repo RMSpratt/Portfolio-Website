@@ -1,0 +1,53 @@
+[
+  {
+    "Type": "TextSection",
+    "Header": "Lua Programmer",
+    "HeadingParagraphs": [
+      "My work on Roblox is primarily focused in programming. I currently work for a couple development groups and otherwise accept programming commissions."
+    ],
+    "Subsections": [
+      {
+        "Type": "ListSection",
+        "Header": "Programming Contributions",
+        "Items": [
+          "Outerworld Productions",
+          "Diabolical GameMakers",
+          "SuperSocial",
+          "<a href='https://www.roblox.com/games/14967585086/Anime-Outfit-Shop-1000'>Anime Outfit Shop</a>"
+        ]
+      }
+    ],
+    "FooterParagraphs": [
+      "A selection of my independent (non-commission) work organized by category can be found below."
+    ]
+  },
+  {
+    "Type": "NavSection",
+    "Header": "Work Samples",
+    "Items": [
+      {
+        "NavHeader": "AI Programming",
+        "NavContent": {
+          "Type": "TextSection",
+          "Header": "State Machine",
+          "HeadingParagraphs": ["Design"],
+          "Subsections": [
+            {
+              "Type": "ImageSection",
+              "Header": "Design"
+            }
+          ]
+        }
+      },
+      {
+        "NavHeader": "Plugin Tools"
+      },
+      {
+        "NavHeader": "System Design"
+      },
+      {
+        "NavHeader": "UI Programming"
+      }
+    ]
+  }
+]

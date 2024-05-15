@@ -12,7 +12,7 @@ let items: [string] = props.sectionBody.Items || []
   <div>
     <SubsectionHeader :heading-level="$props.headingLevel" :heading-text="header" />
     <ul>
-      <li v-for="item in items" v-bind:key="item">{{ item }}</li>
+      <li v-for="item in items" v-bind:key="item" v-html="item"></li>
     </ul>
   </div>
 </template>

@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import AboutSection from './PageSections/AboutPage.vue'
-import RobloxSection from './PageSections/RobloxSection.vue'
+import AboutPage from './PageSections/AboutPage.vue'
+import RobloxPage from './PageSections/RobloxPage.vue'
 
 defineProps(['activeSection'])
 </script>
 
 <template>
   <div id="page-section-full">
-    <AboutSection v-if="$props.activeSection === 0" />
-    <RobloxSection v-else-if="$props.activeSection === 1" />
+    <AboutPage v-if="$props.activeSection === 0" />
+    <RobloxPage v-else-if="$props.activeSection === 1" />
     <!-- <UnitySection v-else-if="$props.activeSection === 2" />
     <MusicSection v-else-if="$props.activeSection === 3" /> -->
   </div>
@@ -25,10 +25,6 @@ defineProps(['activeSection'])
   align-items: center;
   flex-grow: 7.5;
   padding-right: 1%;
-
-  div {
-    margin-bottom: 25px;
-  }
 }
 
 .page-section-side {
@@ -38,25 +34,6 @@ defineProps(['activeSection'])
 
   h2 {
     text-align: center;
-  }
-}
-
-.page-section-block {
-  background-color: $pageColor-light;
-  border: 2px solid black;
-  border-radius: 10px;
-  padding: 1% 2%;
-
-  h2 {
-    text-decoration: underline;
-    margin-bottom: 10px;
-  }
-
-  h3 {
-    margin-bottom: 10px;
-  }
-  p {
-    margin: 5px 0px;
   }
 }
 </style>

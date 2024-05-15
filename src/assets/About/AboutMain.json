@@ -1,104 +1,105 @@
 [
-    {
+  {
+    "Type": "TextSection",
+    "Header": "Software Engineer & Game Developer",
+    "HeadingParagraphs": [
+      "Hello! My name is Reed Spratt, and I am a working professional in the computer games industry.<br></br>",
+      "I am a MSc graduate in computer science and a passionate games researcher, designer, programmer, and tester, always striving to learn new skills and technologies."
+    ],
+    "FooterParagraphs": [
+      "A selection of my recent work can be found on the other pages linked above, or on my Github linked to the right."
+    ],
+    "Subsections": [
+      {
         "Type": "TextSection",
-        "Header": "Software Engineer & Game Developer",
+        "Header": "About Me",
         "HeadingParagraphs": [
-            "Hello! My name is Reed Spratt, and I am a working professional in the computer games industry.<br></br>",
-            "I am a MSc graduate in computer science and a passionate games researcher, designer, programmer, and tester, always striving to learn new skills and technologies."
-        ],
-        "FooterParagraphs": [
-            "A selection of my recent work can be found on the other pages linked above, or on my Github linked to the right."
+          "In recent years, I have migrated to spending more time creating and researching games over playing them. However, I draw a lot of inspiration from the games I have played, so I would like to outline a few here."
         ],
         "Subsections": [
-            {
-                "Type": "TextSection",
-                "Header": "About Me",
-                "HeadingParagraphs": [
-                    "In recent years, I have migrated to spending more time creating and researching games over playing them. However, I draw a lot of inspiration from the games I have played, so I would like to outline a few here."
-                ],
-                "Subsections": [
-                    {
-                        "Type": "ListSection",
-                        "Header": "Select Favourite Games",
-                        "Items": [
-                            "Pokémon Emerald",
-                            "Super Mario Galaxy",
-                            "The Legend of Zelda: Tears of the Kingdom",
-                            "Terraria",
-                            "Tunic"
-                        ]
-                    }
-                ]
-            }
+          {
+            "Type": "ListSection",
+            "Header": "Select Favourite Games",
+            "Items": [
+              "Pokémon Emerald",
+              "Super Mario Galaxy",
+              "The Legend of Zelda: Tears of the Kingdom",
+              "Terraria",
+              "Tunic"
+            ]
+          }
         ]
-    },
-    {
+      }
+    ]
+  },
+  {
+    "Type": "TextSection",
+    "Header": "Education",
+    "Subsections": [
+      {
         "Type": "TextSection",
-        "Header": "Education",
-        "Subsections": [
-            {
-                "Type": "TextSection",
-                "Header": "University of Guelph - BSc.",
-                "HeadingParagraphs": [
-                    "I attended the University of Guelph from 2017-2021 majoring in Software Engineering, and minoring in Music.",
-                    ""
-                ]
-            },
-            {
-                "Type": "TextSection",
-                "Header": "Western University - MSc.",
-                "HeadingParagraphs": [
-                    "I attended Western University from 2021-2023, majoring in Computer Science.",
-                    "I specialized in researching recommender systems, character AI for games, and relational database theory."
-                ]
-            }
+        "Header": "University of Guelph - BSc.",
+        "HeadingParagraphs": [
+          "I attended the University of Guelph from 2017-2021 majoring in Software Engineering, and minoring in Music.",
+          ""
         ]
-    },
-    {
+      },
+      {
         "Type": "TextSection",
-        "Header": "Experience",
-        "Subsections": [
-            {
-                "Type": "TextSection",
-                "Header": "Supersocial - QA Tester",
-                "HeadingParagraphs": [
-                    "<strong>April 2023 - April 2024</strong>",
-                    "I am currently employed at the Roblox experience development company <a href='https://www.supersocialinc.com/'>SuperSocial</a> as a QA Tester. During my time with the company, I have contributed to the release of over ten branded-experiences including: <a href='https://www.supersocialinc.com/experiences/supercampus'>Supercampus</a>, <a href='https://www.supersocialinc.com/experiences/elf'>Elf North Pole Workshop</a>, and <a href='https://www.supersocialinc.com/experiences/beat-galaxy'>Beat Galaxy</a>."
-                ],
-                "Subsections": [
-                    {
-                        "Type": "ListSection",
-                        "Header": "Responsibilities",
-                        "Items": [
-                            "Devising and executing test strategies for new brand experiences.",
-                            "Conducting performance testing in development and live testing.",
-                            "Communicating issues to other development teams after reporting.",
-                            "Participating in and helping to lead coordinated team-wide test sessions.",
-                            "Assisting the QA lead in configuring QA workflows and tools for use."
-                        ]
-                    }
-                ]
-            },
-            {
-                "Type": "TextSection",
-                "Header": "Independent Game Programmer",
-                "HeadingParagraphs": [
-                    "<strong>April 2019 - April 2024</strong>",
-                    "Since 2019, I have been offering programming services as a freelancer while working on my own independent projects. My work for the Unity and Roblox engine can be found on their respective pages linked in the top bar. My areas of specialization for work are listed below."
-                ],
-                "Subsections": [
-                    {
-                        "Type": "ListSection",
-                        "Header": "Research & Project Interests",
-                        "Items": [
-                            "Reusable Design of AI Frameworks",
-                            "Creation of Editor Tools for Unity",
-                            "Creation of Plugins for Roblox Studio",
-                            "Implementation of Dynamic Music in Games"
-                        ]
-                    }
-                ]
-            }
+        "Header": "Western University - MSc.",
+        "HeadingParagraphs": [
+          "I attended Western University from 2021-2023, majoring in Computer Science.",
+          "I specialized in researching recommender systems, character AI for games, and relational database theory."
         ]
-    }
+      }
+    ]
+  },
+  {
+    "Type": "TextSection",
+    "Header": "Experience",
+    "Subsections": [
+      {
+        "Type": "TextSection",
+        "Header": "Supersocial - QA Tester",
+        "HeadingParagraphs": [
+          "<em>April 2023 - April 2024</em>",
+          "I am currently employed at the Roblox experience development company <a href='https://www.supersocialinc.com/'>SuperSocial</a> as a QA Tester. During my time with the company.",
+          "Contributed to thirteen games with branded-experiences including: <a href='https://www.supersocialinc.com/experiences/supercampus'>Supercampus</a>, <a href='https://www.supersocialinc.com/experiences/elf'>Elf North Pole Workshop</a>, and <a href='https://www.supersocialinc.com/experiences/beat-galaxy'>Beat Galaxy</a>."
+        ],
+        "Subsections": [
+          {
+            "Type": "ListSection",
+            "Header": "Responsibilities",
+            "Items": [
+              "Devising and executing test strategies for new brand experiences.",
+              "Conducting performance testing in development and live testing.",
+              "Communicating issues to other development teams after reporting.",
+              "Participating in and helping to lead coordinated team-wide test sessions.",
+              "Assisting the QA lead in configuring QA workflows and tools for use."
+            ]
+          }
+        ]
+      },
+      {
+        "Type": "TextSection",
+        "Header": "Independent - Game Programmer",
+        "HeadingParagraphs": [
+          "<em>April 2019 - April 2024</em>",
+          "Since 2019, I have been offering programming services as a freelancer while working on my own independent projects. My work for the Unity and Roblox engine can be found on their respective pages linked in the top bar. My areas of specialization for work are listed below."
+        ],
+        "Subsections": [
+          {
+            "Type": "ListSection",
+            "Header": "Research & Project Interests",
+            "Items": [
+              "Reusable Design of AI Frameworks",
+              "Creation of Editor Tools for Unity",
+              "Creation of Plugins for Roblox Studio",
+              "Implementation of Dynamic Music in Games"
+            ]
+          }
+        ]
+      }
+    ]
+  }
 ]
