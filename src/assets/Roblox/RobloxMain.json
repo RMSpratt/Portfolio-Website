@@ -27,17 +27,45 @@
     "Items": [
       {
         "NavHeader": "AI Programming",
-        "NavContent": {
-          "Type": "TextSection",
-          "Header": "State Machine",
-          "HeadingParagraphs": ["Design"],
-          "Subsections": [
-            {
-              "Type": "ImageSection",
-              "Header": "Design"
-            }
-          ]
-        }
+        "NavContent": [
+          {
+            "Type": "TextSection",
+            "Header": "State Machine",
+            "HeadingParagraphs": [
+              "A flat Luau-based StateMachine framework for managing state-based character and object behaviours."
+            ],
+            "Subsections": [
+              {
+                "Type": "TextSection",
+                "Header": "Development ",
+                "HeadingParagraphs": ["TBD"]
+              },
+              {
+                "Type": "ListSection",
+                "Header": "Highlights",
+                "Items": [
+                  "Blackboard Architecture for Knowledge Representation",
+                  "Full Type Definitions for StateMachine Components",
+                  "Support for Shared and Independent Facts about the Environment",
+                  "Support for Tree-like Condition Structures for Decision-Making",
+                  "No External Coding Dependencies"
+                ]
+              },
+              {
+                "Type": "LinkSection",
+                "Header": "Github",
+                "LinkItems": [
+                  {
+                    "Id": "Github-SM-Link",
+                    "Label": "More Information",
+                    "Href": "https://github.com/RMSpratt/Roblox-State-Machine",
+                    "LinkText": "https://github.com/RMSpratt/Roblox-State-Machine"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "NavHeader": "Plugin Tools"
@@ -46,7 +74,22 @@
         "NavHeader": "System Design"
       },
       {
-        "NavHeader": "UI Programming"
+        "NavHeader": "UI Programming",
+        "NavContent": [
+          {
+            "Type": "TextSection",
+            "Header": "Leaderboards",
+            "HeadingParagraphs": [
+              "A selection of some work in creating global leaderboards are highlighted below."
+            ],
+            "Subsections": [
+              {
+                "Type": "ImageGallerySection",
+                "Images": []
+              }
+            ]
+          }
+        ]
       }
     ]
   }

@@ -1,7 +1,13 @@
 <script setup lang="ts">
 import SubsectionHeader from './SubsectionHeader.vue'
 import TextSection from './TextSection.vue'
+
 import { ref } from 'vue'
+
+type NavInfo = {
+  NavHeader: string
+  NavContent: {}
+}
 
 const props = defineProps(['sectionBody', 'headingLevel'])
 
@@ -9,14 +15,16 @@ console.log(props.sectionBody)
 
 let header = props.sectionBody.Header
 let navItems = props.sectionBody.Items
-let navHeaders: [string] = []
-let navContent = []
+let navHeaders: string[] = []
+let navContent: { [key: string]: any } = {}
 
 let activeHeader = ref('')
 let activeNavContent = ref({})
 
+let highlightedHeader: Element
+
 if (navItems !== undefined) {
-  navItems.forEach((element) => {
+  navItems.forEach((element: NavInfo) => {
     if (element.NavHeader !== undefined) {
       navHeaders.push(element.NavHeader)
       navContent[element.NavHeader] = element.NavContent
@@ -24,8 +32,8 @@ if (navItems !== undefined) {
   })
 }
 
-activeHeader.value = navHeaders.length > 0 ? navHeaders[0] : null
-activeNavContent.value = navContent[activeHeader]
+activeHeader.value = navHeaders.length > 0 ? navHeaders[0] : ''
+activeNavContent.value = navContent[activeHeader.value]
 
 function setActiveHeader(headerLabel: string) {
   activeHeader.value = headerLabel
@@ -36,19 +44,19 @@ function setActiveHeader(headerLabel: string) {
   <div>
     <SubsectionHeader :heading-level="$props.headingLevel" :heading-text="header" />
     <div class="subsection-nav-items">
-      <button
-        v-for="headerLabel in navHeaders"
-        v-bind:key="headerLabel"
-        :class="[headerLabel == activeHeader ? 'activeHeader' : '']"
-        @click="setActiveHeader(headerLabel)"
-      >
-        {{ headerLabel }}
-      </button>
+      <div v-for="headerLabel in navHeaders" v-bind:key="headerLabel">
+        <button
+          :class="[headerLabel == activeHeader ? 'activeHeader' : '']"
+          @click="setActiveHeader(headerLabel)"
+        >
+          {{ headerLabel }}
+        </button>
+      </div>
     </div>
-    <div class="subsection">
+    <div class="subsection" v-for="navSection in activeNavContent" v-bind:key="navSection">
       <TextSection
-        v-if="activeNavContent && activeNavContent.Type == 'TextSection'"
-        :section-body="activeNavContent"
+        v-if="navSection.Type == 'TextSection'"
+        :section-body="navSection"
         :heading-level="headingLevel + 1"
       />
     </div>
@@ -58,10 +66,15 @@ function setActiveHeader(headerLabel: string) {
 .subsection-nav-items {
   display: flex;
   justify-content: first baseline;
+  margin: 1.25rem 0px;
 
-  * {
+  div {
     width: 20%;
     text-align: left;
+  }
+
+  div:hover button {
+    font-weight: bold;
   }
 
   .activeHeader {
