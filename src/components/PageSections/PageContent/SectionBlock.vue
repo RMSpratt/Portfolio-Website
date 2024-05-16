@@ -2,6 +2,7 @@
 import TextSection from './SubsectionContent/TextSection.vue'
 import ListSection from './SubsectionContent/ListSection.vue'
 import ImageSection from './SubsectionContent/ImageSection.vue'
+import ImageGallerySection from './SubsectionContent/ImageGallerySection.vue'
 import LinkSection from './SubsectionContent/LinkSection.vue'
 import NavSection from './SubsectionContent/NavSection.vue'
 
@@ -26,6 +27,11 @@ defineProps(['sectionBody'])
         :section-body="$props.sectionBody"
         :heading-level="2"
       />
+      <ImageGallerySection
+        v-else-if="$props.sectionBody.Type == 'ImageGallerySection'"
+        :section-body="$props.sectionBody"
+        :heading-level="2"
+      />
       <LinkSection
         v-else-if="$props.sectionBody.Type == 'LinkSection'"
         :section-body="$props.sectionBody"
@@ -46,6 +52,7 @@ defineProps(['sectionBody'])
   box-shadow: 0 5px 5px $pageColor-dark;
   margin-bottom: 25px;
   padding: 1% 1%;
+  width: 100%;
 
   h2 {
     margin-bottom: 0rem;
@@ -56,7 +63,7 @@ defineProps(['sectionBody'])
   }
 
   .subsection {
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
 
     p {
       margin: 5px 0px;

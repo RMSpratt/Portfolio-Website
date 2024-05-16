@@ -85,7 +85,12 @@
             "Subsections": [
               {
                 "Type": "ImageGallerySection",
-                "Images": []
+                "Header": "Animations",
+                "Images": [
+                  {
+                    "Name": "Global-Leaderboard-Update.gif"
+                  }
+                ]
               }
             ]
           }

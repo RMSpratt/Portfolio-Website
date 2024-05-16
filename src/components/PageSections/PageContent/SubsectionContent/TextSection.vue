@@ -2,16 +2,21 @@
 import SubsectionHeader from './SubsectionHeader.vue'
 import ListSection from './ListSection.vue'
 import ImageSection from './ImageSection.vue'
+import ImageGallerySection from './ImageGallerySection.vue'
+import NavSection from './NavSection.vue'
 import LinkSection from './LinkSection.vue'
+
+import { type TextSectionDetails } from '../../../../types/SubsectionData'
 
 import { ref } from 'vue'
 
 const props = defineProps(['sectionBody', 'headingLevel'])
+const sectionBody = props.sectionBody as TextSectionDetails
 
-let header = ref(props.sectionBody.Header)
-let headingParagraphs: [...any] = props.sectionBody.HeadingParagraphs || []
-let footerParagraphs: [...any] = props.sectionBody.FooterParagraphs || []
-let subsections: [...any] = props.sectionBody.Subsections || []
+let header = ref(sectionBody.Header)
+let headingParagraphs: [...any] = sectionBody.HeadingParagraphs || []
+let footerParagraphs: [...any] = sectionBody.FooterParagraphs || []
+let subsections: [...any] = sectionBody.Subsections || []
 </script>
 
 <template>
@@ -46,6 +51,11 @@ let subsections: [...any] = props.sectionBody.Subsections || []
       />
       <NavSection
         v-else-if="sp.Type == 'NavSection'"
+        :section-body="sp"
+        :heading-level="headingLevel + 1"
+      />
+      <ImageGallerySection
+        v-else-if="sp.Type == 'ImageGallerySection'"
         :section-body="sp"
         :heading-level="headingLevel + 1"
       />

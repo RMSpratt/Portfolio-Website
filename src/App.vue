@@ -77,13 +77,4 @@ h3 {
 em {
   font-size: 0.9rem;
 }
-
-img {
-  border-radius: 10%;
-  display: flex;
-  max-height: auto;
-  margin: 20px auto;
-  width: 50%;
-  max-width: 250px;
-}
 </style>

@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import SubsectionHeader from './SubsectionHeader.vue'
 import { ref } from 'vue'
+import { type ListSectionDetails } from '../../../../types/SubsectionData'
 
 const props = defineProps(['sectionBody', 'headingLevel'])
+const sectionBody = props.sectionBody as ListSectionDetails
 
-let header = ref(props.sectionBody.Header)
-let items: [string] = props.sectionBody.Items || []
+let header = ref(sectionBody.Header)
+let items = sectionBody.Items
 </script>
 
 <template>

@@ -1,13 +1,8 @@
 <script setup lang="ts">
 import SubsectionHeader from './SubsectionHeader.vue'
 import TextSection from './TextSection.vue'
-
 import { ref } from 'vue'
-
-type NavInfo = {
-  NavHeader: string
-  NavContent: {}
-}
+import { type Section, type NavSectionDetails } from '../../../../types/SubsectionData'
 
 const props = defineProps(['sectionBody', 'headingLevel'])
 
@@ -19,12 +14,10 @@ let navHeaders: string[] = []
 let navContent: { [key: string]: any } = {}
 
 let activeHeader = ref('')
-let activeNavContent = ref({})
-
-let highlightedHeader: Element
+let activeNavContent = ref<Section | null>()
 
 if (navItems !== undefined) {
-  navItems.forEach((element: NavInfo) => {
+  navItems.forEach((element: NavSectionDetails) => {
     if (element.NavHeader !== undefined) {
       navHeaders.push(element.NavHeader)
       navContent[element.NavHeader] = element.NavContent
