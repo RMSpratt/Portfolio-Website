@@ -9,6 +9,7 @@ const props = defineProps(['sectionBody', 'headingLevel'])
 console.log(props.sectionBody)
 
 let header = props.sectionBody.Header
+let headingParagraphs = props.sectionBody.HeadingParagraphs
 let navItems = props.sectionBody.Items
 let navHeaders: string[] = []
 let navContent: { [key: string]: any } = {}
@@ -36,7 +37,14 @@ function setActiveHeader(headerLabel: string) {
 <template>
   <div>
     <SubsectionHeader :heading-level="$props.headingLevel" :heading-text="header" />
-    <div class="subsection-nav-items">
+    <div class="subsection" v-if="headingParagraphs != null">
+      <p
+        v-for="headingParagraph in headingParagraphs"
+        v-html="headingParagraph"
+        v-bind:key="headingParagraph"
+      ></p>
+    </div>
+    <div class="subsection subsection-nav-header">
       <div v-for="headerLabel in navHeaders" v-bind:key="headerLabel">
         <button
           :class="[headerLabel == activeHeader ? 'activeHeader' : '']"
@@ -56,7 +64,8 @@ function setActiveHeader(headerLabel: string) {
   </div>
 </template>
 <style lang="scss">
-.subsection-nav-items {
+.subsection-nav-header {
+  border-bottom: 2px solid $pageColor-darkest;
   display: flex;
   justify-content: first baseline;
   margin: 1.25rem 0px;
@@ -67,6 +76,7 @@ function setActiveHeader(headerLabel: string) {
   }
 
   div:hover button {
+    cursor: pointer;
     font-weight: bold;
   }
 

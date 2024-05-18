@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import SubsectionHeader from './SubsectionHeader.vue'
 
-const LINK_SRC_PREFIX = '../../../../assets/'
+const LINK_SRC_PREFIX = '../../../../assets/Images/'
 const props = defineProps(['sectionBody', 'headingLevel'])
 
 type ImageGalleryDetails = {
@@ -12,6 +12,7 @@ type ImageGalleryDetails = {
     {
       Name: string
       AltText: string
+      Caption: string
     }
   ]
 }
@@ -22,10 +23,14 @@ let imageHeader: string = sectionBody.Header
 let headingParagraphs: string[] = props.sectionBody.HeadingParagraphs
 let footerParagraphs: string[] = props.sectionBody.FooterParagraphs
 
-let images: { Name: string; AltText: string }[] = []
+let images: { Name: string; AltText: string; Caption: string }[] = []
 
-props.sectionBody.Images?.forEach((image: { Name: string; AltText: string }) => {
-  images.push({ ['Name']: image.Name, ['AltText']: image.AltText })
+props.sectionBody.Images?.forEach((image: { Name: string; AltText: string; Caption: string }) => {
+  images.push({
+    ['Name']: image.Name,
+    ['AltText']: image.AltText,
+    ['Caption']: image.Caption
+  })
 })
 
 function getPath(srcPath: string) {
@@ -36,18 +41,16 @@ function getPath(srcPath: string) {
 <template>
   <div>
     <SubsectionHeader :heading-level="$props.headingLevel" :heading-text="imageHeader" />
-    <div class="subsection">
+    <div class="subsection" v-if="headingParagraphs != null">
       <p v-for="hp in headingParagraphs" v-html="hp" v-bind:key="hp"></p>
     </div>
     <div class="subsection image-gallery">
-      <img
-        v-for="image in images"
-        v-bind:key="image.Name"
-        :alt="image.AltText"
-        :src="getPath(image.Name)"
-      />
+      <div v-for="image in images" v-bind:key="image.Name">
+        <img :alt="image.AltText" :src="getPath(image.Name)" />
+        <p v-if="image.Caption" v-html="image.Caption"></p>
+      </div>
     </div>
-    <div class="subsection">
+    <div class="subsection" v-if="footerParagraphs != null">
       <p v-for="fp in footerParagraphs" v-html="fp" v-bind:key="fp"></p>
     </div>
   </div>
@@ -60,10 +63,14 @@ function getPath(srcPath: string) {
   justify-content: left;
   overflow: hidden;
 
-  img {
-    height: auto;
+  div {
     max-width: calc(33% - 3px);
-    object-fit: contain;
+    text-align: center;
+    img {
+      box-shadow: 0 2px 5px $pageColor-dark;
+      height: auto;
+      width: 100%;
+    }
   }
 }
 

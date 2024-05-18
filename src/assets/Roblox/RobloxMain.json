@@ -24,6 +24,7 @@
   {
     "Type": "NavSection",
     "Header": "Work Samples",
+    "HeadingParagraphs": ["Select one of the topics below to showcase work of that category."],
     "Items": [
       {
         "NavHeader": "AI Programming",
@@ -71,7 +72,34 @@
         "NavHeader": "Plugin Tools"
       },
       {
-        "NavHeader": "System Design"
+        "NavHeader": "System Design",
+        "NavContent": [
+          {
+            "Type": "TextSection",
+            "Header": "Tycoon Framework",
+            "HeadingParagraphs": [
+              "Designed and implemented a flexible framework to provide base functionality for games in the Tycoon genre.",
+              "The external service <a href='https://sleitnick.github.io/Knit/'>Knit</a> was used to facilitate client-server communication."
+            ],
+            "Subsections": [
+              {
+                "Type": "ImageGallerySection",
+                "Header": "Design",
+                "Images": [
+                  {
+                    "Name": "TycoonStructure-UML.svg"
+                  },
+                  {
+                    "Name": "TycoonClientDataRequest.svg"
+                  }
+                ],
+                "HeadingParagraphs": [
+                  "The UML diagram pictured here describes the set of ModuleScripts that manage the Tycoon on the Server and Client. More details about the structure and purpose of each component can be found on Github."
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "NavHeader": "UI Programming",

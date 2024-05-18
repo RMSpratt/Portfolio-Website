@@ -46,31 +46,6 @@ defineProps(['sectionBody'])
   </div>
 </template>
 <style lang="scss">
-.page-section-block {
-  background-color: $pageColor-medium;
-  border-radius: 10px 10px 0px 0px;
-  box-shadow: 0 5px 5px $pageColor-dark;
-  margin-bottom: 25px;
-  padding: 1% 1%;
-  width: 100%;
-
-  h2 {
-    margin-bottom: 0rem;
-  }
-
-  h3 {
-    margin-bottom: 0.5rem;
-  }
-
-  .subsection {
-    margin-bottom: 1.5rem;
-
-    p {
-      margin: 5px 0px;
-    }
-  }
-}
-
 .subsection-small-heading {
   font-style: italic;
   margin-bottom: 0.5rem;

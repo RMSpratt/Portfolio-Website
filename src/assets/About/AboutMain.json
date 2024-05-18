@@ -40,7 +40,8 @@
         "Type": "TextSection",
         "Header": "University of Guelph - BSc.",
         "HeadingParagraphs": [
-          "I attended the University of Guelph from 2017-2021 majoring in Software Engineering, and minoring in Music.",
+          "<em>September 2017 - April 2021</em>",
+          "I attended the University of Guelph majoring in Software Engineering, and minoring in Music.",
           ""
         ]
       },
@@ -48,6 +49,7 @@
         "Type": "TextSection",
         "Header": "Western University - MSc.",
         "HeadingParagraphs": [
+          "<em>September 2021 - April 2023</em>",
           "I attended Western University from 2021-2023, majoring in Computer Science.",
           "I specialized in researching recommender systems, character AI for games, and relational database theory."
         ]
@@ -60,11 +62,31 @@
     "Subsections": [
       {
         "Type": "TextSection",
+        "Header": "Independent - Game Programmer",
+        "HeadingParagraphs": [
+          "<em>April 2019 - Present</em>",
+          "Since 2019, I have been offering programming services as a freelancer while working on my own independent projects. My work for the Unity and Roblox engine can be found on their respective pages linked in the top bar. My areas of specialization for work are listed below."
+        ],
+        "Subsections": [
+          {
+            "Type": "ListSection",
+            "Header": "Research & Project Interests",
+            "Items": [
+              "Reusable Design of AI Frameworks",
+              "Creation of Editor Tools for Unity",
+              "Creation of Plugins for Roblox Studio",
+              "Implementation of Dynamic Music in Games"
+            ]
+          }
+        ]
+      },
+      {
+        "Type": "TextSection",
         "Header": "Supersocial - QA Tester",
         "HeadingParagraphs": [
-          "<em>April 2023 - April 2024</em>",
-          "I am currently employed at the Roblox experience development company <a href='https://www.supersocialinc.com/'>SuperSocial</a> as a QA Tester. During my time with the company.",
-          "Contributed to thirteen games with branded-experiences including: <a href='https://www.supersocialinc.com/experiences/supercampus'>Supercampus</a>, <a href='https://www.supersocialinc.com/experiences/elf'>Elf North Pole Workshop</a>, and <a href='https://www.supersocialinc.com/experiences/beat-galaxy'>Beat Galaxy</a>."
+          "<em>April 2023 - Present</em>",
+          "I am currently employed at the Roblox experience development company <a href='https://www.supersocialinc.com/'>SuperSocial</a> as a QA Tester.",
+          "I have contributed to thirteen games with brand collaborations including: Fairview Portals, Gucci, NARS Cosmetics, Tokido and Walmart."
         ],
         "Subsections": [
           {
@@ -77,25 +99,61 @@
               "Participating in and helping to lead coordinated team-wide test sessions.",
               "Assisting the QA lead in configuring QA workflows and tools for use."
             ]
+          },
+          {
+            "Type": "ImageGallerySection",
+            "Header": "Contributions",
+            "Images": [
+              {
+                "Name": "Elf-Up.png",
+                "Caption": "<a href='https://www.supersocialinc.com/experiences/elf-up'>e.l.f UP!</a>"
+              },
+              {
+                "Name": "North-Pole.png",
+                "Caption": "<a href='https://www.supersocialinc.com/experiences/elf'>Elf North Pole Workshop</a>"
+              },
+              {
+                "Name": "Beat-Galaxy.png",
+                "Caption": "<a href='https://www.supersocialinc.com/experiences/beat-galaxy'>Beat Galaxy</a>"
+              }
+            ]
           }
         ]
       },
       {
         "Type": "TextSection",
-        "Header": "Independent - Game Programmer",
+        "Header": "MELON - QA Tester",
         "HeadingParagraphs": [
-          "<em>April 2019 - April 2024</em>",
-          "Since 2019, I have been offering programming services as a freelancer while working on my own independent projects. My work for the Unity and Roblox engine can be found on their respective pages linked in the top bar. My areas of specialization for work are listed below."
+          "<em>March 2022 - September 2022</em>",
+          "Worked as a QA tester in a volunteer capacity for the company <a href='https://melonverse.com/'>MELON</a>.",
+          "During my time here, I contributed to branded experiences including "
         ],
         "Subsections": [
           {
             "Type": "ListSection",
-            "Header": "Research & Project Interests",
+            "Header": "Responsibilities",
             "Items": [
-              "Reusable Design of AI Frameworks",
-              "Creation of Editor Tools for Unity",
-              "Creation of Plugins for Roblox Studio",
-              "Implementation of Dynamic Music in Games"
+              "Performed exploratory and guided testing for upcoming games.",
+              "Provided feedback regarding UX and overall game design and feel.",
+              "Assisted engineering in debugging performance issues."
+            ]
+          },
+          {
+            "Type": "ImageGallerySection",
+            "Header": "Contributions",
+            "Images": [
+              {
+                "Name": "Curio-City.png",
+                "Caption": "<a href='https://www.roblox.com/games/10425361163/CurioCity'>Curio-City</a>"
+              },
+              {
+                "Name": "George-Ezra-Gold-Rush-Kid.png",
+                "Caption": "<a href='https://www.roblox.com/games/10057963710/George-Ezra-s-Gold-Rush-Kid-Experience'>The Gold Rush Kid Experience</a>"
+              },
+              {
+                "Name": "Chipotle-Burrito-Builder.png",
+                "Caption": "<a href='https://www.roblox.com/games/7603178367/Chipotle-Burrito-Builder'>Chipotle Burrito Builder</a>"
+              }
             ]
           }
         ]

@@ -5,9 +5,10 @@ import RobloxMain from '../../assets/Roblox/RobloxMain.json'
 </script>
 
 <template>
-  <div class="page-section-main">
-    <SectionBlock v-for="section in RobloxMain" :section-body="section" v-bind:key="section" />
+  <div v-for="(section, index) in RobloxMain" v-bind:key="index" class="page-section-row">
+    <div class="page-section-center">
+      <SectionBlock :section-body="section" />
+    </div>
   </div>
-  <div class="page-section-side"></div>
 </template>
 <style lang="scss"></style>

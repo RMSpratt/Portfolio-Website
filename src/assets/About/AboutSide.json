@@ -7,9 +7,8 @@
         "Type": "ImageSection",
         "Image": {
           "Name": "Pfp.jpg",
-          "AltText": "",
-          "Class": "side-image",
-          "Float": ""
+          "AltText": "Profile Picture",
+          "Class": "side-image"
         }
       },
       {
@@ -19,13 +18,13 @@
             "Id": "Github-Link",
             "Label": "Github",
             "Href": "https://github.com/RMSpratt",
-            "LinkText": "https://github.com/RMSpratt"
+            "LinkText": "RMSpratt"
           },
           {
             "Id": "LinkedIn-Link",
             "Label": "LinkedIn",
             "Href": "https://www.linkedin.com/in/reed-spratt-695818165/",
-            "LinkText": "https://www.linkedin.com/in/reed-spratt-695818165/"
+            "LinkText": "Reed Spratt"
           }
         ]
       }

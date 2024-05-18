@@ -14,16 +14,16 @@ const props = defineProps(['sectionBody', 'headingLevel'])
 const sectionBody = props.sectionBody as TextSectionDetails
 
 let header = ref(sectionBody.Header)
-let headingParagraphs: [...any] = sectionBody.HeadingParagraphs || []
-let footerParagraphs: [...any] = sectionBody.FooterParagraphs || []
+let headingParagraphs: [...any] = sectionBody.HeadingParagraphs || null
+let footerParagraphs: [...any] = sectionBody.FooterParagraphs || null
 let subsections: [...any] = sectionBody.Subsections || []
 </script>
 
 <template>
-  <div>
+  <div :class="headingLevel == 2 ? 'subsection-head' : 'subsection'">
     <SubsectionHeader :heading-level="$props.headingLevel" :heading-text="header" />
 
-    <div class="subsection">
+    <div class="subsection" v-if="headingParagraphs != null">
       <p v-for="hp in headingParagraphs" v-html="hp" v-bind:key="hp"></p>
     </div>
 
@@ -61,7 +61,7 @@ let subsections: [...any] = sectionBody.Subsections || []
       />
     </div>
 
-    <div>
+    <div v-if="footerParagraphs != null">
       <p v-for="fp in footerParagraphs" v-html="fp" v-bind:key="fp"></p>
     </div>
   </div>

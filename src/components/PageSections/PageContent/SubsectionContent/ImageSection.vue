@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import SubsectionHeader from './SubsectionHeader.vue'
 
-const LINK_SRC_PREFIX = '../../../../assets/'
+const LINK_SRC_PREFIX = '../../../../assets/Images/'
 const props = defineProps(['sectionBody', 'headingLevel'])
 
 import { type ImageSectionDetails } from '../../../../types/SubsectionData'
@@ -40,7 +40,7 @@ function getPath(srcPath: string) {
 <template>
   <div>
     <SubsectionHeader :heading-level="$props.headingLevel" :heading-text="imageHeader" />
-    <div class="subsection">
+    <div class="subsection" v-if="headingParagraphs != null">
       <p v-for="hp in headingParagraphs" v-html="hp" v-bind:key="hp"></p>
     </div>
     <div class="subsection image-container">
@@ -52,22 +52,29 @@ function getPath(srcPath: string) {
       />
       <p v-for="wp in wrappedParagraphs" v-html="wp" v-bind:key="wp"></p>
     </div>
-    <div class="subsection">
+    <div class="subsection" v-if="footerParagraphs != null">
       <p v-for="fp in footerParagraphs" v-html="fp" v-bind:key="fp"></p>
     </div>
   </div>
 </template>
 <style lang="scss">
 .image-container {
+  img {
+    box-shadow: 0 2px 5px $pageColor-dark;
+    height: auto;
+    max-width: 600px;
+  }
   overflow: hidden;
 }
 
 .image-left {
   float: left;
+  margin: 0px 10px 0px 0px;
 }
 
 .image-right {
   float: right;
+  margin: 0px 0px 0px 10px;
 }
 
 // Special Image Classes
