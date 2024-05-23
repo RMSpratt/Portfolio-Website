@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import SubsectionHeader from './SubsectionHeader.vue'
 import TextSection from './TextSection.vue'
+import MediaGallerySection from './MediaGallerySection.vue'
 import { ref } from 'vue'
 import { type Section, type NavSectionDetails } from '../../../../types/SubsectionData'
 
@@ -60,6 +61,11 @@ function setActiveHeader(headerLabel: string) {
         :section-body="navSection"
         :heading-level="headingLevel + 1"
       />
+      <MediaGallerySection
+        v-else-if="navSection.Type == 'MediaGallerySection'"
+        :section-body="navSection"
+        :heading-level="headingLevel + 1"
+      />
     </div>
   </div>
 </template>
@@ -71,8 +77,9 @@ function setActiveHeader(headerLabel: string) {
   margin: 1.25rem 0px;
 
   div {
-    width: 20%;
+    margin: 0px 1%;
     text-align: left;
+    width: 18%;
   }
 
   div:hover button {

@@ -4,12 +4,13 @@ import SubsectionHeader from './SubsectionHeader.vue'
 const LINK_SRC_PREFIX = '../../../../assets/Images/'
 const props = defineProps(['sectionBody', 'headingLevel'])
 
-type ImageGalleryDetails = {
+type MediaGalleryDetails = {
   Header: string
   HeadingParagraphs: string[]
   FooterParagraphs: string[]
-  Images: [
+  Media: [
     {
+      MediaType: string
       Name: string
       AltText: string
       Caption: string
@@ -17,21 +18,24 @@ type ImageGalleryDetails = {
   ]
 }
 
-const sectionBody = props.sectionBody as ImageGalleryDetails
+const sectionBody = props.sectionBody as MediaGalleryDetails
 
-let imageHeader: string = sectionBody.Header
+let mediaHeader: string = sectionBody.Header
 let headingParagraphs: string[] = props.sectionBody.HeadingParagraphs
 let footerParagraphs: string[] = props.sectionBody.FooterParagraphs
 
-let images: { Name: string; AltText: string; Caption: string }[] = []
+let mediaItems: { Name: string; AltText: string; Caption: string; MediaType: string }[] = []
 
-props.sectionBody.Images?.forEach((image: { Name: string; AltText: string; Caption: string }) => {
-  images.push({
-    ['Name']: image.Name,
-    ['AltText']: image.AltText,
-    ['Caption']: image.Caption
-  })
-})
+props.sectionBody.Media?.forEach(
+  (mediaItem: { Name: string; AltText: string; Caption: string; MediaType: string }) => {
+    mediaItems.push({
+      ['MediaType']: mediaItem.MediaType,
+      ['Name']: mediaItem.Name,
+      ['AltText']: mediaItem.AltText,
+      ['Caption']: mediaItem.Caption
+    })
+  }
+)
 
 function getPath(srcPath: string) {
   return new URL(`${LINK_SRC_PREFIX}${srcPath}`, import.meta.url).href
@@ -40,14 +44,17 @@ function getPath(srcPath: string) {
 
 <template>
   <div>
-    <SubsectionHeader :heading-level="$props.headingLevel" :heading-text="imageHeader" />
+    <SubsectionHeader :heading-level="$props.headingLevel" :heading-text="mediaHeader" />
     <div class="subsection" v-if="headingParagraphs != null">
       <p v-for="hp in headingParagraphs" v-html="hp" v-bind:key="hp"></p>
     </div>
-    <div class="subsection image-gallery">
-      <div v-for="image in images" v-bind:key="image.Name">
-        <img :alt="image.AltText" :src="getPath(image.Name)" />
-        <p v-if="image.Caption" v-html="image.Caption"></p>
+    <div class="subsection media-gallery" v-if="mediaItems != null">
+      <div v-for="mediaItem in mediaItems" v-bind:key="mediaItem.Name">
+        <video v-if="mediaItem.MediaType == 'Video'" controls>
+          <source :src="getPath(mediaItem.Name)" type="video/mp4" />
+        </video>
+        <img v-else :alt="mediaItem.AltText" :src="getPath(mediaItem.Name)" />
+        <p v-if="mediaItem.Caption" v-html="mediaItem.Caption"></p>
       </div>
     </div>
     <div class="subsection" v-if="footerParagraphs != null">
@@ -56,7 +63,7 @@ function getPath(srcPath: string) {
   </div>
 </template>
 <style lang="scss">
-.image-gallery {
+.media-gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -66,7 +73,8 @@ function getPath(srcPath: string) {
   div {
     max-width: calc(33% - 3px);
     text-align: center;
-    img {
+    img,
+    video {
       box-shadow: 0 2px 5px $pageColor-dark;
       height: auto;
       width: 100%;
@@ -74,7 +82,7 @@ function getPath(srcPath: string) {
   }
 }
 
-.image-gallery::after {
+.media-gallery::after {
   content: '';
 }
 </style>

@@ -2,7 +2,7 @@
 import SubsectionHeader from './SubsectionHeader.vue'
 import ListSection from './ListSection.vue'
 import ImageSection from './ImageSection.vue'
-import ImageGallerySection from './ImageGallerySection.vue'
+import MediaGallerySection from './MediaGallerySection.vue'
 import NavSection from './NavSection.vue'
 import LinkSection from './LinkSection.vue'
 
@@ -54,8 +54,8 @@ let subsections: [...any] = sectionBody.Subsections || []
         :section-body="sp"
         :heading-level="headingLevel + 1"
       />
-      <ImageGallerySection
-        v-else-if="sp.Type == 'ImageGallerySection'"
+      <MediaGallerySection
+        v-else-if="sp.Type == 'MediaGallerySection'"
         :section-body="sp"
         :heading-level="headingLevel + 1"
       />

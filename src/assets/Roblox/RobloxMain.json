@@ -17,9 +17,7 @@
         ]
       }
     ],
-    "FooterParagraphs": [
-      "A selection of my independent (non-commission) work organized by category can be found below."
-    ]
+    "FooterParagraphs": ["A selection of my work organized by category can be found below."]
   },
   {
     "Type": "NavSection",
@@ -78,14 +76,16 @@
             "Type": "TextSection",
             "Header": "Tycoon Framework",
             "HeadingParagraphs": [
-              "Designed and implemented a flexible framework to provide base functionality for games in the Tycoon genre.",
-              "The external service <a href='https://sleitnick.github.io/Knit/'>Knit</a> was used to facilitate client-server communication."
+              "Reusable framework for describing and managing Tycoons fitting the traditional Roblox-based 'Tycoon' genre."
             ],
             "Subsections": [
               {
-                "Type": "ImageGallerySection",
-                "Header": "Design",
-                "Images": [
+                "Type": "MediaGallerySection",
+                "Header": "Development",
+                "HeadingParagraphs": [
+                  "The motivation for this project was to employ the single responsibility principle for traditional OOP classes for ModuleScript components. To avoid tight coupling between non-Tycoon ModuleScripts with those within the Tycoon, a subscription-based data updating system was used to allow any Script to read and update the latest Tycoon data."
+                ],
+                "Media": [
                   {
                     "Name": "TycoonStructure-UML.svg"
                   },
@@ -93,8 +93,82 @@
                     "Name": "TycoonClientDataRequest.svg"
                   }
                 ],
+                "FooterParagraphs": [
+                  "The diagrams above were created during development to illustrate how the structure of the framework as well as how initialization and communication are handled."
+                ]
+              },
+              {
+                "Type": "ListSection",
+                "Header": "Highlights",
+                "Items": [
+                  "Component-based Tycoon framework using Lua tables",
+                  "Ability to observe and modify Tycoon data through safe requests",
+                  "Subscription-based data updates for Tycoon instances using proxy tables",
+                  "Data integrity checks for requests to update and write to Tycoon data",
+                  "Client-Server Communication achieved using the open-source framework <a href='https://sleitnick.github.io/Knit/'>Knit</a>"
+                ]
+              },
+              {
+                "Type": "LinkSection",
+                "Header": "Github",
+                "LinkItems": [
+                  {
+                    "Id": "Github-Tycoon-Link",
+                    "Label": "More Information",
+                    "Href": "https://github.com/RMSpratt/Roblox-Portfolio-Projects/tree/main/Tycoon%20Framework",
+                    "LinkText": "https://github.com/RMSpratt/RobloxTycoonFramework"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Type": "TextSection",
+            "Header": "Dialog System",
+            "HeadingParagraphs": [
+              "A runtime dialog system for character dialog and unnamed speaker dialog prompts."
+            ],
+            "Subsections": [
+              {
+                "Type": "MediaGallerySection",
+                "Header": "Development",
                 "HeadingParagraphs": [
-                  "The UML diagram pictured here describes the set of ModuleScripts that manage the Tycoon on the Server and Client. More details about the structure and purpose of each component can be found on Github."
+                  "This system was designed for use in a larger project to support character dialog with the ability to branch according to manual choices and hidden progression-based influences.",
+                  "A compact grammar lexicon is used to define dialog trees through text in a spreadsheet before being unpacked into a nested table format for Roblox to interpret."
+                ],
+                "Media": [
+                  {
+                    "Name": "Roblox-Dialog-System-Scripts.svg"
+                  },
+                  {
+                    "Name": "Roblox-Dialog-System-Load-Tree.svg"
+                  },
+                  {
+                    "Name": "Roblox-Dialog-System-Read-Node.svg"
+                  }
+                ]
+              },
+              {
+                "Type": "ListSection",
+                "Header": "Features",
+                "Items": [
+                  "Dialog Tree Structure defined with a parsed language grammar",
+                  "Branching dialog options dictated by player choices",
+                  "Conditional dialog based on external game data",
+                  "Forwards and Backwards dialog navigation",
+                  "Support for automatic dialog navigation"
+                ]
+              },
+              {
+                "Type": "LinkSection",
+                "Header": "Github",
+                "LinkItems": [
+                  {
+                    "Id": "Github-DialogSystem-Rblx-Link",
+                    "Label": "More Information",
+                    "Href": "https://github.com/RMSpratt/Roblox-Portfolio-Projects/tree/main/DialogSystem",
+                    "LinkText": "https://github.com/RMSpratt/RobloxDialogSystem"
+                  }
                 ]
               }
             ]
@@ -112,14 +186,47 @@
             ],
             "Subsections": [
               {
-                "Type": "ImageGallerySection",
+                "Type": "MediaGallerySection",
                 "Header": "Animations",
-                "Images": [
+                "Media": [
                   {
                     "Name": "Global-Leaderboard-Update.gif"
                   }
                 ]
               }
+            ]
+          }
+        ]
+      },
+      {
+        "NavHeader": "Miscellaneous",
+        "NavContent": [
+          {
+            "Type": "MediaGallerySection",
+            "Header": "Reworking Gear",
+            "HeadingParagraphs": [
+              "My earliest work in Lua programming for Roblox was done fixing Gear items that were broken over the years by Roblox engine updates.",
+              "These tools are filtering-enabled ready, and compatible with R6 <em>and</em> R15 character rigs."
+            ],
+            "Media": [
+              {
+                "MediaType": "Video",
+                "Name": "Roblox-8bitSword.mp4",
+                "Caption": "8-bit Sword"
+              },
+              {
+                "MediaType": "Video",
+                "Name": "Roblox-ChameleonPotion.mp4",
+                "Caption": "Chameleon Potion"
+              },
+              {
+                "MediaType": "Video",
+                "Name": "Roblox-SnowballCannon.mp4",
+                "Caption": "Snowball Cannon"
+              }
+            ],
+            "FooterParagraphs": [
+              "The code for each tool is open-source and available on <a href='https://github.com/RMSpratt/Roblox-Portfolio-Projects/tree/main/Tools'>Github.</a>"
             ]
           }
         ]

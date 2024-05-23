@@ -1,5 +1,5 @@
 <script setup lang="ts">
-let pageHeadings: string[] = ['About', 'Roblox', 'Unity', 'Music']
+let pageHeadings: string[] = ['About', 'Roblox', 'Unity', 'Music', 'Research']
 
 defineProps(['pageTitle'])
 defineEmits(['setPageSection'])
@@ -39,6 +39,11 @@ defineEmits(['setPageSection'])
 
 #headerNav > div {
   width: 25%;
+
+  button {
+    margin: 0px auto;
+    width: 100%;
+  }
 
   button:hover {
     cursor: pointer;

@@ -2,7 +2,7 @@
 import TextSection from './SubsectionContent/TextSection.vue'
 import ListSection from './SubsectionContent/ListSection.vue'
 import ImageSection from './SubsectionContent/ImageSection.vue'
-import ImageGallerySection from './SubsectionContent/ImageGallerySection.vue'
+import MediaGallerySection from './SubsectionContent/MediaGallerySection.vue'
 import LinkSection from './SubsectionContent/LinkSection.vue'
 import NavSection from './SubsectionContent/NavSection.vue'
 
@@ -27,8 +27,8 @@ defineProps(['sectionBody'])
         :section-body="$props.sectionBody"
         :heading-level="2"
       />
-      <ImageGallerySection
-        v-else-if="$props.sectionBody.Type == 'ImageGallerySection'"
+      <MediaGallerySection
+        v-else-if="$props.sectionBody.Type == 'MediaGallerySection'"
         :section-body="$props.sectionBody"
         :heading-level="2"
       />

@@ -101,9 +101,9 @@
             ]
           },
           {
-            "Type": "ImageGallerySection",
+            "Type": "MediaGallerySection",
             "Header": "Contributions",
-            "Images": [
+            "Media": [
               {
                 "Name": "Elf-Up.png",
                 "Caption": "<a href='https://www.supersocialinc.com/experiences/elf-up'>e.l.f UP!</a>"
@@ -139,9 +139,9 @@
             ]
           },
           {
-            "Type": "ImageGallerySection",
+            "Type": "MediaGallerySection",
             "Header": "Contributions",
-            "Images": [
+            "Media": [
               {
                 "Name": "Curio-City.png",
                 "Caption": "<a href='https://www.roblox.com/games/10425361163/CurioCity'>Curio-City</a>"
