@@ -1,0 +1,153 @@
+[
+  {
+    "Type": "TextSection",
+    "Header": "Game & Editor Tool Programmer",
+    "HeadingParagraphs": [
+      "My work for Unity projects is primarily focused in programming tasks, but I also offer services in UI design for runtime and editor interfaces, level design, and testing."
+    ]
+  },
+  {
+    "Type": "NavSection",
+    "Header": "Past Works",
+    "HeadingParagraphs": [
+      "Select one of the topics below to showcase project work for that category."
+    ],
+    "Items": [
+      {
+        "NavHeader": "Games & Prototypes",
+        "NavContent": [
+          {
+            "Type": "TextSection",
+            "Header": "Reap the Reward",
+            "HeadingParagraphs": [
+              "Reap the Reward was the first complete game prototype I created using the Unity Engine.",
+              "This 2D dungeon-crawler was designed to test out the implementation of state-based character AI."
+            ],
+            "Subsections": [
+              {
+                "Type": "ImageSection",
+                "Image": {
+                  "Name": "Reap-The-Reward-Thumbnail.png",
+                  "Float": "Left"
+                },
+                "WrappedParagraphs": [
+                  "Reap the Reward's level design was based on the 2D platformer <em>Wario Land 4</em> where the player must return to the start to complete each level.",
+                  "A blend of enemy combat and puzzle-solving allow the player to progress to the bottom of a dungeon to collect treasure."
+                ]
+              },
+              {
+                "Type": "MediaGallerySection",
+                "Header": "Development",
+                "HeadingParagraphs": [
+                  "During development, utility tools for the Editor were created to assist in design and during development. These can be seen below."
+                ],
+                "Media": [
+                  {
+                    "Name": "Reap-the-Reward-Camera-Areas.png",
+                    "Caption": "Camera Areas and Acceptable Transitions"
+                  },
+                  {
+                    "Name": "Reap-the-Reward-Enemy-Spawn-Points.png",
+                    "Caption": "Enemy Spawn Point Tracking"
+                  },
+                  {
+                    "Name": "Reap-the-Reward-Enemy-AI-Visuals.png",
+                    "Caption": "Enemy AI Attack and View Ranges"
+                  }
+                ]
+              },
+              {
+                "Type": "MediaGallerySection",
+                "Header": "AI Growth",
+                "HeadingParagraphs": [
+                  "Over time, the AI behind this project's enemies developed to become more sophisticated.",
+                  "The current implementation uses a Hierarchical State Machine (HSM) with Blackboards for knowledge representation and UnityEvents to assign actions."
+                ],
+                "Media": [
+                  {
+                    "Name": "Reap-the-Reward-Gladiator-HSM.png",
+                    "Caption": "Melee Gladiator Enemy AI"
+                  },
+                  {
+                    "Name": "Reap-the-Reward-Marksman-HSM.png",
+                    "Caption": "Ranged Marksman Enemy AI"
+                  },
+                  {
+                    "Name": "Reap-the-Reward-Minstrel-HSM.png",
+                    "Caption": "Specialist Minstrel Enemy AI"
+                  }
+                ]
+              },
+              {
+                "Type": "LinkSection",
+                "Header": "Github",
+                "LinkItems": [
+                  {
+                    "Id": "Github-RTR-Unity-Link",
+                    "Label": "More Information",
+                    "Href": "https://github.com/RMSpratt/Reap-The-Reward",
+                    "LinkText": "https://github.com/RMSpratt/Reap-The-Reward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "NavHeader": "Custom Editor Tools",
+        "NavContent": [
+          {
+            "Type": "TextSection",
+            "Header": "State Machine Editor Window",
+            "HeadingParagraphs": [
+              "A visual node-based Editor Window for easier editing of character StateMachines."
+            ],
+            "Subsections": [
+              {
+                "Type": "MediaGallerySection",
+                "Header": "Interface",
+                "HeadingParagraphs": [
+                  "The EditorWindow itself was created using Unity's IMGUI UI framework and acts as a drag-and-drop editor tool."
+                ],
+                "Media": [
+                  {
+                    "Name": "State-Machine-Node-Editor-State-Details-View.png",
+                    "Caption": "Details View for Individual States"
+                  },
+                  {
+                    "Name": "State-Machine-Node-Editor-Transition-Details-View.png",
+                    "Caption": "Details View for Individual StateTransitions"
+                  }
+                ]
+              },
+              {
+                "Type": "ListSection",
+                "Header": "Features",
+                "Items": [
+                  "No-Code Visual Editor for Defining State-Based Behaviour",
+                  "StateTransition Editing through Conditions using Blackboard Data",
+                  "Smart Detection of Available Actions (Functions) for States to Execute",
+                  "Serialized ScriptableObject Representation of StateMachine Graphs",
+                  "Outputs StateMachine Objects for Use at Runtime with no Additional Work"
+                ]
+              },
+              {
+                "Type": "LinkSection",
+                "Header": "Github",
+                "LinkItems": [
+                  {
+                    "Id": "Github-SM-Node-Editor-Unity-Link",
+                    "Label": "More Information",
+                    "Href": "https://github.com/RMSpratt/Unity-StateMachine-Node-Editor",
+                    "LinkText": "https://github.com/RMSpratt/Unity-StateMachine-Node-Editor"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
