@@ -48,6 +48,7 @@ function setActiveHeader(headerLabel: string) {
     <div class="subsection subsection-nav-header">
       <div v-for="headerLabel in navHeaders" v-bind:key="headerLabel">
         <button
+          type="button"
           :class="[headerLabel == activeHeader ? 'activeHeader' : '']"
           @click="setActiveHeader(headerLabel)"
         >
@@ -85,11 +86,6 @@ function setActiveHeader(headerLabel: string) {
   div:hover button {
     cursor: pointer;
     font-weight: bold;
-  }
-
-  .activeHeader {
-    font-weight: bold;
-    font-style: italic;
   }
 }
 </style>

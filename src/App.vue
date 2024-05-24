@@ -8,7 +8,8 @@ const PAGE_MAP: { [id: string]: number } = {
   About: 0,
   Roblox: 1,
   Unity: 2,
-  Music: 3
+  Web: 3,
+  Research: 4
 }
 
 let currPageTitle = ref('About')
@@ -80,5 +81,10 @@ h3 {
 
 em {
   font-size: 0.9rem;
+}
+
+.activeHeader {
+  font-weight: bold;
+  font-style: italic;
 }
 </style>

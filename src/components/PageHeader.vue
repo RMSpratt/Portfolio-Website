@@ -1,8 +1,17 @@
 <script setup lang="ts">
-let pageHeadings: string[] = ['About', 'Roblox', 'Unity', 'Music', 'Research']
+import { ref } from 'vue'
+let pageNavHeadings: string[] = ['About', 'Roblox', 'Unity', 'Web', 'Research']
+let activePageNavHeading = ref(pageNavHeadings[0])
 
 defineProps(['pageTitle'])
-defineEmits(['setPageSection'])
+const emits = defineEmits(['setPageSection'])
+
+function setActivePageNav(pageNavHeading: string) {
+  if (pageNavHeading == activePageNavHeading.value) return
+
+  activePageNavHeading.value = pageNavHeading
+  emits('setPageSection', pageNavHeading)
+}
 </script>
 
 <template>
@@ -11,8 +20,14 @@ defineEmits(['setPageSection'])
       <h1>Reed Spratt - {{ pageTitle }}</h1>
     </div>
     <div id="headerNav">
-      <div v-for="item in pageHeadings" v-bind:key="item">
-        <button @click="$emit('setPageSection', item)">{{ item }}</button>
+      <div v-for="navHeading in pageNavHeadings" v-bind:key="navHeading">
+        <button
+          type="button"
+          :class="[navHeading == activePageNavHeading ? 'activeHeader' : '']"
+          @click="setActivePageNav(navHeading)"
+        >
+          {{ navHeading }}
+        </button>
       </div>
     </div>
   </div>
@@ -44,10 +59,10 @@ defineEmits(['setPageSection'])
     margin: 0px auto;
     width: 100%;
   }
+}
 
-  button:hover {
-    cursor: pointer;
-    font-weight: bold;
-  }
+#headerNav > div:hover button {
+  cursor: pointer;
+  font-weight: bold;
 }
 </style>

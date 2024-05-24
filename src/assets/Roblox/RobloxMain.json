@@ -21,8 +21,10 @@
   },
   {
     "Type": "NavSection",
-    "Header": "Work Samples",
-    "HeadingParagraphs": ["Select one of the topics below to showcase work of that category."],
+    "Header": "Past Works",
+    "HeadingParagraphs": [
+      "Select one of the topics below to showcase project work for that category."
+    ],
     "Items": [
       {
         "NavHeader": "AI Programming",
@@ -36,8 +38,11 @@
             "Subsections": [
               {
                 "Type": "TextSection",
-                "Header": "Development ",
-                "HeadingParagraphs": ["TBD"]
+                "Header": "Development",
+                "HeadingParagraphs": [
+                  "This StateMachine framework was created in an effort to port over a similar implementation made for use in Unity.",
+                  "The goal for the framework was to create a simple StateMachine that didn't require explicit definitions for functions and available data."
+                ]
               },
               {
                 "Type": "ListSection",
@@ -65,9 +70,6 @@
             ]
           }
         ]
-      },
-      {
-        "NavHeader": "Plugin Tools"
       },
       {
         "NavHeader": "System Design",
@@ -138,13 +140,17 @@
                 ],
                 "Media": [
                   {
-                    "Name": "Roblox-Dialog-System-Scripts.svg"
+                    "Name": "Roblox-Dialog-System-Scripts.svg",
+                    "Caption": "System Script (Table) Entities"
                   },
                   {
-                    "Name": "Roblox-Dialog-System-Load-Tree.svg"
+                    "Name": "Roblox-Dialog-System-Load-Dialog.svg",
+                    "Caption": "Load Dialog Sequence Diagram"
                   },
                   {
-                    "Name": "Roblox-Dialog-System-Read-Node.svg"
+                    "MediaType": "Video",
+                    "Name": "Roblox-Dialog-System-Options.mp4",
+                    "Caption": "Demonstration of Branching Dialog"
                   }
                 ]
               },

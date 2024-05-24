@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import AboutPage from './PageSections/AboutPage.vue'
 import RobloxPage from './PageSections/RobloxPage.vue'
+import UnityPage from './PageSections/UnityPage.vue'
 
 defineProps(['activeSection'])
 </script>
@@ -8,8 +9,8 @@ defineProps(['activeSection'])
 <template>
   <AboutPage v-if="$props.activeSection === 0" />
   <RobloxPage v-else-if="$props.activeSection === 1" />
-  <!-- <UnitySection v-else-if="$props.activeSection === 2" />
-    <MusicSection v-else-if="$props.activeSection === 3" /> -->
+  <UnityPage v-else-if="$props.activeSection === 2" />
+  <!-- //<-- <MusicSection v-else-if="$props.activeSection === 3" /> -->
 </template>
 
 <style lang="scss">

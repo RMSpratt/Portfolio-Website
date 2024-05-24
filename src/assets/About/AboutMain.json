@@ -3,83 +3,30 @@
     "Type": "TextSection",
     "Header": "Software Engineer & Game Developer",
     "HeadingParagraphs": [
-      "Hello! My name is Reed Spratt, and I am a working professional in the computer games industry.<br></br>",
-      "I am a MSc graduate in computer science and a passionate games researcher, designer, programmer, and tester, always striving to learn new skills and technologies."
+      "Hello! My name is Reed Spratt, and I am a working professional in the computer games industry.",
+      "I consider myself to be a passionate games researcher, designer, programmer, and tester, always striving to learn new skills and technologies.",
+      "Since 2019, I have been offering programming services as a freelancer while working on my own independent projects."
+    ],
+    "Subsections": [
+      {
+        "Type": "ListSection",
+        "Header": "Research & Work Interests",
+        "Items": [
+          "Reusable Design of AI Frameworks",
+          "Creation of Editor Tools for Unity",
+          "Creation of Plugins for Roblox Studio",
+          "Implementation of Dynamic Music in Games"
+        ]
+      }
     ],
     "FooterParagraphs": [
       "A selection of my recent work can be found on the other pages linked above, or on my Github linked to the right."
-    ],
-    "Subsections": [
-      {
-        "Type": "TextSection",
-        "Header": "About Me",
-        "HeadingParagraphs": [
-          "In recent years, I have migrated to spending more time creating and researching games over playing them. However, I draw a lot of inspiration from the games I have played, so I would like to outline a few here."
-        ],
-        "Subsections": [
-          {
-            "Type": "ListSection",
-            "Header": "Select Favourite Games",
-            "Items": [
-              "Pokémon Emerald",
-              "Super Mario Galaxy",
-              "The Legend of Zelda: Tears of the Kingdom",
-              "Terraria",
-              "Tunic"
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "Type": "TextSection",
-    "Header": "Education",
-    "Subsections": [
-      {
-        "Type": "TextSection",
-        "Header": "University of Guelph - BSc.",
-        "HeadingParagraphs": [
-          "<em>September 2017 - April 2021</em>",
-          "I attended the University of Guelph majoring in Software Engineering, and minoring in Music.",
-          ""
-        ]
-      },
-      {
-        "Type": "TextSection",
-        "Header": "Western University - MSc.",
-        "HeadingParagraphs": [
-          "<em>September 2021 - April 2023</em>",
-          "I attended Western University from 2021-2023, majoring in Computer Science.",
-          "I specialized in researching recommender systems, character AI for games, and relational database theory."
-        ]
-      }
     ]
   },
   {
     "Type": "TextSection",
     "Header": "Experience",
     "Subsections": [
-      {
-        "Type": "TextSection",
-        "Header": "Independent - Game Programmer",
-        "HeadingParagraphs": [
-          "<em>April 2019 - Present</em>",
-          "Since 2019, I have been offering programming services as a freelancer while working on my own independent projects. My work for the Unity and Roblox engine can be found on their respective pages linked in the top bar. My areas of specialization for work are listed below."
-        ],
-        "Subsections": [
-          {
-            "Type": "ListSection",
-            "Header": "Research & Project Interests",
-            "Items": [
-              "Reusable Design of AI Frameworks",
-              "Creation of Editor Tools for Unity",
-              "Creation of Plugins for Roblox Studio",
-              "Implementation of Dynamic Music in Games"
-            ]
-          }
-        ]
-      },
       {
         "Type": "TextSection",
         "Header": "Supersocial - QA Tester",
@@ -154,6 +101,57 @@
                 "Name": "Chipotle-Burrito-Builder.png",
                 "Caption": "<a href='https://www.roblox.com/games/7603178367/Chipotle-Burrito-Builder'>Chipotle Burrito Builder</a>"
               }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Type": "TextSection",
+    "Header": "More About Me",
+    "Subsections": [
+      {
+        "Type": "TextSection",
+        "Header": "Education",
+        "Subsections": [
+          {
+            "Type": "TextSection",
+            "Header": "University of Guelph - BSc.",
+            "HeadingParagraphs": [
+              "<em>September 2017 - April 2021</em>",
+              "I attended the University of Guelph majoring in Software Engineering, and minoring in Music.",
+              "During my time here, I participated in seven team-based software projects while studying and practicing agile development methodologies."
+            ]
+          },
+          {
+            "Type": "TextSection",
+            "Header": "Western University - MSc.",
+            "HeadingParagraphs": [
+              "<em>September 2021 - April 2023</em>",
+              "I attended Western University to study advanced topics and complete research. I majored in Computer Science.",
+              "My specializations included: music recommender systems, character AI for games, relational databases, and unstructured data processing."
+            ]
+          }
+        ]
+      },
+      {
+        "Type": "TextSection",
+        "Header": "Creative Influences",
+        "HeadingParagraphs": [
+          "The basis of my work and much of my research in game design and development stems from the games I grew up with.",
+          "A selection of the most prominent influences are below."
+        ],
+        "Subsections": [
+          {
+            "Type": "ListSection",
+            "Header": "Games",
+            "Items": [
+              "Pokémon Emerald",
+              "Super Mario Galaxy",
+              "Banjo-Kazooie & Banjo-Tooie",
+              "Terraria",
+              "Tunic"
             ]
           }
         ]

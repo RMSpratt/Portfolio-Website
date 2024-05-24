@@ -27,7 +27,7 @@ if (props.sectionBody.Image) {
       : 'image-right'
     : ''
   imageName = sectionBody.Image.Name
-  imageClass = sectionBody.Image.Class
+  imageClass = sectionBody.Image.Class || ''
 }
 
 imageCombinedClass += imageClass + ' ' + imageFloat
