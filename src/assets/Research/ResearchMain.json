@@ -1,0 +1,140 @@
+[
+  {
+    "Type": "TextSection",
+    "Header": "Graduate Research",
+    "HeadingParagraphs": [
+      "During my MSc. program, each of my selected courses featured one or more research components to be completed.",
+      "While none of these works are currently published, I have made some of the research materials public on Github, with a brief overview of each presented below."
+    ]
+  },
+  {
+    "Type": "TextSection",
+    "Header": "Multi-Agent Collaboration in Games: Solutions for Coordinated Behaviour (2023)",
+    "HeadingParagraphs": [
+      "In studying the spectrum of AI techniques found in video and computer-based games, I completed a survey paper to explore how independent AI entities (agents) could be made to work collaboratively."
+    ],
+    "Subsections": [
+      {
+        "Type": "TextSection",
+        "Header": "Section Breakdown",
+        "HeadingParagraphs": [
+          "This paper was presented in seven sections following a brief introduction and discussion of related works.",
+          "<strong>Section I</strong> defines game settings where one or more AI agents are expected to collaborate.",
+          "<strong>Section II</strong> explores techniques for coordinated movement and multi-agent pathfinding.",
+          "<strong>Section III</strong> explores techniques for agents to communicate with an environment and each other.",
+          "<strong>Section IV</strong> explores techniques for agents to make decisions influenced by other agents.",
+          "<strong>Section V</strong> explores techniques for agents to learn from other agents and the player.",
+          "<strong>Section VI</strong> explores techniques for agents to effectively communicate with a player.",
+          "<strong>Section VII</strong> concludes the paper with a few closing statements."
+        ]
+      },
+      {
+        "Type": "ListSection",
+        "Header": "Key Topics",
+        "Items": [
+          "Coordinating Movement Between Uncoordinated Agents",
+          "Methods to Perceive and Store Information about an Environment",
+          "Emotions, Personality, and Social Cues for AI Characters",
+          "Agent Learning through Gameplay and Imitation",
+          "Player Intent Recognition and Input Capture Techniques"
+        ]
+      }
+    ],
+    "FooterParagraphs": [
+      "The abstract, full list of citations, and complimentary slideshow presentation are available on <a href='https://github.com/RMSpratt/Game-Collaborative-AI-Research'>Github</a>.",
+      "This project was completed under the supervision of Dr. Michael Katchabaw."
+    ]
+  },
+  {
+    "Type": "TextSection",
+    "Header": "Collaborative Decision-Making Between Independent Game Agents (2023)",
+    "HeadingParagraphs": [
+      "My capstone research project during my MSc. studies culminated in the design of a AI framework capable of supporting collaborative actions between agents without a higher-level coordinator. Agents are instead self-motivated and act according to their own beliefs and values."
+    ],
+    "Subsections": [
+      {
+        "Type": "ImageSection",
+        "Header": "Agent Model and the Brain",
+        "HeadingParagraphs": [
+          "Agents existing within the framework are defined with a <em>Brain</em> for independent decision-making, and can optionally exist within <em>Groups</em> for collaboration.",
+          "Agents will always take the action with the highest insistence as determined by their Brain."
+        ],
+        "Image": {
+          "Name": "Directed-Study-Agent-Model.svg",
+          "Float": "Left"
+        },
+        "WrappedParagraphs": [
+          "An agent's 'brain' encompasses any knowledge about the environment and other agents that can influence decision-making. This was ultimately defined with three components: a CharacterModel, Blackboard, and AffinityMatrix.",
+          "<br>",
+          "These three components allow for agents to have distinct personalities, world views, and relationships with other agents.",
+          "<br>",
+          "When an agent is presented with a specific action to carry out, it will query its brain to determine if it should perform the action. This includes actions presented by other agents within a group."
+        ]
+      },
+      {
+        "Type": "ImageSection",
+        "Header": "Decision Making",
+        "HeadingParagraphs": [
+          "The actual decision-making for actions uses a discontent-based system inspired by goal-driven behaviour techniques."
+        ],
+        "Image": {
+          "Name": "Directed-Study-Decision-Making-Influence.svg"
+        },
+        "WrappedParagraphs": [
+          "Discontent can exist to avoid taking an action <em>or</em> to support taking said action. Discontent according to agent beliefs or the world state add costs for an action. Discontent according to agent goals indicate insistence to take an action.",
+          "<br>",
+          "Any number of DiscontentFactors can be defined as key-value properties in the range [0-1] describing discontent for an action.",
+          "A higher discontent value indicates more reluctance to perform an action.",
+          "<br>",
+          "External factors to decide whether an action can be taken are defined using Conditions. These are independent of an agent's discontent for an action and are either satisfied or unsatisfied."
+        ]
+      },
+      {
+        "Type": "TextSection",
+        "Header": "Research Status",
+        "HeadingParagraphs": [
+          "As it stands, the framework exists largely in design only. The hope is to have a Unity-based demonstration of the framework in action in the near future.",
+          "In the meantime, if you would like to discuss the research personally, I am happy to oblige.",
+          "This project was completed under the supervision of Dr. Michael Katchabaw."
+        ]
+      }
+    ]
+  },
+  {
+    "Type": "TextSection",
+    "Header": "Surveying Recommender System Techniques for Music (2021)",
+    "HeadingParagraphs": [
+      "As part of my studies in practical applications for machine learning, I completed research on the subject of how systems for recommending music are utilized by streaming service providers."
+    ],
+    "Subsections": [
+      {
+        "Type": "TextSection",
+        "Header": "Section Breakdown",
+        "HeadingParagraphs": [
+          "The paper was presented in eight sections, following a brief introduction.",
+          "<strong>Section I</strong> provides foundational information about recommender systems, how they function, and their components.",
+          "<strong>Section II </strong> answers the questions of where, why, and how recommender systems are used for music recommendation.",
+          "<strong>Section III</strong> discusses content-based recommendation techniques using audio data",
+          "<strong>Section IV</strong> discusses collaborative recommendation techniques using user data.",
+          "<strong>Section V</strong> introduces the use of conversation-based recommendation with virtual assistants and text-based chatbots.",
+          "<strong>Section VII</strong> provides examples of techniques used by the music streaming providers: Spotify, LastFm, and Pandora.",
+          "<strong>Section VIII</strong> provides some closing remarks and possible new directions with recommender systems for music."
+        ]
+      },
+      {
+        "Type": "ListSection",
+        "Header": "Key Topics",
+        "Items": [
+          "Recommender Systems: Structure, History, and Motivations",
+          "Content-Based Analysis of Auditory Content",
+          "Collaborative Filtering Systems for Music Discovery",
+          "Context-Based Recommendation with User Demographics",
+          "Modern Challenges for Music Recommendation"
+        ]
+      }
+    ],
+    "FooterParagraphs": [
+      "The introduction of the paper, full list of citations, and complimentary slideshow presentation are available on <a href='https://github.com/RMSpratt/Music-Recommender-Systems-Survey'>Github</a>."
+    ]
+  }
+]

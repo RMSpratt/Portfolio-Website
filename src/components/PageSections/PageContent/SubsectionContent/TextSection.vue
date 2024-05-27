@@ -61,7 +61,7 @@ let subsections: [...any] = sectionBody.Subsections || []
       />
     </div>
 
-    <div v-if="footerParagraphs != null">
+    <div class="subsection" v-if="footerParagraphs != null">
       <p v-for="fp in footerParagraphs" v-html="fp" v-bind:key="fp"></p>
     </div>
   </div>

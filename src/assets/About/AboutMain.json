@@ -146,13 +146,7 @@
           {
             "Type": "ListSection",
             "Header": "Games",
-            "Items": [
-              "Pokémon Emerald",
-              "Super Mario Galaxy",
-              "Banjo-Kazooie & Banjo-Tooie",
-              "Terraria",
-              "Tunic"
-            ]
+            "Items": ["Banjo-Kazooie", "Pokémon Emerald", "Super Mario Galaxy", "Terraria"]
           }
         ]
       }

@@ -37,10 +37,6 @@ html {
   padding: 0px;
 }
 
-body {
-  //   background-color: $pageColor-lightest;
-}
-
 button {
   background: none;
   border: 0px;
@@ -83,8 +79,25 @@ em {
   font-size: 0.9rem;
 }
 
+img {
+  height: auto;
+  max-width: 600px;
+  max-height: 20rem;
+}
+
+img,
+video {
+  box-shadow: 0 2px 5px $pageColor-dark;
+}
+
 .activeHeader {
   font-weight: bold;
   font-style: italic;
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
 }
 </style>

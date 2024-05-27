@@ -20,6 +20,7 @@ let items = sectionBody.Items
 </template>
 <style>
 ul {
-  list-style-position: inside;
+  list-style-position: outside;
+  padding-left: calc(1% + 0.5rem);
 }
 </style>

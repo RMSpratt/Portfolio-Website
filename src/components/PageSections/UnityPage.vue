@@ -6,7 +6,7 @@ import UnityMain from '../../assets/Unity/UnityMain.json'
 
 <template>
   <div v-for="(section, index) in UnityMain" v-bind:key="index" class="page-section-row">
-    <div class="page-section-center">
+    <div class="page-section-full">
       <SectionBlock :section-body="section" />
     </div>
   </div>

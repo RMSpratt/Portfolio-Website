@@ -66,17 +66,15 @@ function getPath(srcPath: string) {
 .media-gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 1rem;
   justify-content: left;
   overflow: hidden;
 
   div {
-    max-width: calc(33% - 3px);
+    max-width: calc(33% - 0.4rem);
     text-align: center;
     img,
     video {
-      box-shadow: 0 2px 5px $pageColor-dark;
-      height: auto;
       width: 100%;
     }
   }
@@ -84,5 +82,15 @@ function getPath(srcPath: string) {
 
 .media-gallery::after {
   content: '';
+}
+
+@media screen and (max-width: 600px) {
+  .media-gallery {
+    flex-direction: column;
+
+    div {
+      max-width: 100%;
+    }
+  }
 }
 </style>

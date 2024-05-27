@@ -25,6 +25,12 @@
             "Label": "LinkedIn",
             "Href": "https://www.linkedin.com/in/reed-spratt-695818165/",
             "LinkText": "Reed Spratt"
+          },
+          {
+            "Id": "Email-Link",
+            "Label": "Email",
+            "Href": "mailto:reedsprattdev@gmail.com",
+            "LinkText": "Mail: Reed Spratt"
           }
         ]
       }

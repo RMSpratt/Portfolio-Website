@@ -15,22 +15,13 @@ let wrappedParagraphs: string[] = props.sectionBody.WrappedParagraphs
 
 let imageAltText: string = ''
 let imageClass: string = ''
-let imageFloat: string = ''
 let imageName: string = ''
-let imageCombinedClass: string = ''
 
 if (props.sectionBody.Image) {
   imageAltText = props.sectionBody.Image.AltText
-  imageFloat = props.sectionBody.Image.Float
-    ? sectionBody.Image.Float == 'Left'
-      ? 'image-left'
-      : 'image-right'
-    : ''
   imageName = sectionBody.Image.Name
   imageClass = sectionBody.Image.Class || ''
 }
-
-imageCombinedClass += imageClass + ' ' + imageFloat
 
 function getPath(srcPath: string) {
   return new URL(`${LINK_SRC_PREFIX}${srcPath}`, import.meta.url).href
@@ -43,14 +34,11 @@ function getPath(srcPath: string) {
     <div class="subsection" v-if="headingParagraphs != null">
       <p v-for="hp in headingParagraphs" v-html="hp" v-bind:key="hp"></p>
     </div>
-    <div class="subsection image-container">
-      <img
-        v-if="imageName"
-        :src="getPath(imageName)"
-        :alt="imageAltText"
-        :class="imageCombinedClass"
-      />
-      <p v-for="wp in wrappedParagraphs" v-html="wp" v-bind:key="wp"></p>
+    <div class="image-container">
+      <img v-if="imageName" :src="getPath(imageName)" :alt="imageAltText" :class="imageClass" />
+      <div class="subsection" v-if="wrappedParagraphs != null">
+        <p v-for="wp in wrappedParagraphs" v-html="wp" v-bind:key="wp"></p>
+      </div>
     </div>
     <div class="subsection" v-if="footerParagraphs != null">
       <p v-for="fp in footerParagraphs" v-html="fp" v-bind:key="fp"></p>
@@ -59,31 +47,39 @@ function getPath(srcPath: string) {
 </template>
 <style lang="scss">
 .image-container {
-  img {
-    box-shadow: 0 2px 5px $pageColor-dark;
-    height: auto;
-    max-width: 600px;
-  }
-  overflow: hidden;
-}
-
-.image-left {
-  float: left;
-  margin: 0px 10px 0px 0px;
-}
-
-.image-right {
-  float: right;
-  margin: 0px 0px 0px 10px;
-}
-
-// Special Image Classes
-.side-image {
-  border-radius: 10%;
   display: flex;
-  max-height: auto;
-  margin: 20px auto;
-  width: 50%;
-  max-width: 250px;
+
+  img {
+    margin: 0px 10px 0px 0px;
+  }
+
+  // Special Image Classes
+  .side-image {
+    border-radius: 10%;
+    display: flex;
+    height: auto;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 250px;
+  }
+
+  .image-right {
+    margin: 0px 0px 0px 10px;
+  }
+}
+
+.image-container-reverse {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 600px) {
+  .image-container,
+  .image-container-reverse {
+    flex-direction: column;
+
+    img {
+      margin: 0px 0px 10px 0px;
+    }
+  }
 }
 </style>

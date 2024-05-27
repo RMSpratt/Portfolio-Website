@@ -6,7 +6,7 @@ import SectionBlock from './PageContent/SectionBlock.vue'
 
 <template>
   <div v-for="(section, index) in AboutMain" v-bind:key="index" class="page-section-row">
-    <div class="page-section-main">
+    <div :class="index < AboutSide.length ? 'page-section-main' : 'page-section-full'">
       <SectionBlock :section-body="section" />
     </div>
     <div class="page-section-side" v-if="index < AboutSide.length">

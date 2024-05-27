@@ -2,6 +2,7 @@
 import AboutPage from './PageSections/AboutPage.vue'
 import RobloxPage from './PageSections/RobloxPage.vue'
 import UnityPage from './PageSections/UnityPage.vue'
+import ResearchPage from './PageSections/ResearchPage.vue'
 
 defineProps(['activeSection'])
 </script>
@@ -10,7 +11,7 @@ defineProps(['activeSection'])
   <AboutPage v-if="$props.activeSection === 0" />
   <RobloxPage v-else-if="$props.activeSection === 1" />
   <UnityPage v-else-if="$props.activeSection === 2" />
-  <!-- //<-- <MusicSection v-else-if="$props.activeSection === 3" /> -->
+  <ResearchPage v-else-if="$props.activeSection === 4" />
 </template>
 
 <style lang="scss">
@@ -25,8 +26,8 @@ defineProps(['activeSection'])
     padding-right: 1%;
   }
 
-  .page-section-center {
-    max-width: 90%;
+  .page-section-full {
+    margin: 0px auto;
     width: 100%;
 
     .page-section-block {
@@ -74,6 +75,10 @@ defineProps(['activeSection'])
 
       p {
         margin: 5px 0px;
+      }
+
+      .subsection {
+        margin-bottom: 1rem;
       }
     }
 

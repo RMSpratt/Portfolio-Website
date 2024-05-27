@@ -89,10 +89,14 @@
                 ],
                 "Media": [
                   {
-                    "Name": "TycoonStructure-UML.svg"
+                    "AltText": "A UML diagram displaying the Tycoon Framework scripts.",
+                    "Caption": "Tycoon Script Organization",
+                    "Name": "Roblox-Tycoon-Script-Organization.svg"
                   },
                   {
-                    "Name": "TycoonClientDataRequest.svg"
+                    "AltText": "A diagram displaying the flow of Tycoon data requests.",
+                    "Caption": "Script Handler Flow for Data Requests",
+                    "Name": "Roblox-Tycoon-Client-Data-Request-Flow.svg"
                   }
                 ],
                 "FooterParagraphs": [
