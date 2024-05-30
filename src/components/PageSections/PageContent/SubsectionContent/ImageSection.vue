@@ -37,7 +37,7 @@ function getPath(srcPath: string) {
       <p v-for="hp in headingParagraphs" v-html="hp" v-bind:key="hp"></p>
     </div>
     <div :class="imageFloat == 'Right' ? 'image-container-reverse' : 'image-container'">
-      <img v-if="imageName" :src="getPath(imageName)" :alt="imageAltText" :class="imageClass" />
+      <img v-if="imageName" :src="`${imageName}`" :alt="imageAltText" :class="imageClass" />
       <div class="subsection" v-if="wrappedParagraphs != null">
         <p v-for="wp in wrappedParagraphs" v-html="wp" v-bind:key="wp"></p>
       </div>

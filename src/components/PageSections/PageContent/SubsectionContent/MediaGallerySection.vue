@@ -51,7 +51,7 @@ function getPath(srcPath: string) {
     <div class="subsection media-gallery" v-if="mediaItems != null">
       <div v-for="mediaItem in mediaItems" v-bind:key="mediaItem.Name">
         <video v-if="mediaItem.MediaType == 'Video'" controls>
-          <source :src="getPath(mediaItem.Name)" type="video/mp4" />
+          <source :src="`${mediaItem.Name}`" type="video/mp4" />
         </video>
         <img v-else :alt="mediaItem.AltText" :src="getPath(mediaItem.Name)" />
         <p v-if="mediaItem.Caption" v-html="mediaItem.Caption"></p>
