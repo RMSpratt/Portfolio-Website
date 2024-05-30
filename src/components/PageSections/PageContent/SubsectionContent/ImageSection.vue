@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import SubsectionHeader from './SubsectionHeader.vue'
 
-const LINK_SRC_PREFIX = '../../../../assets/Images/'
+const LINK_SRC_PREFIX = '../../../../assets/'
 const props = defineProps(['sectionBody', 'headingLevel'])
 
 import { type ImageSectionDetails } from '../../../../types/SubsectionData'
