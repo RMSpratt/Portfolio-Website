@@ -18,5 +18,13 @@ export default defineConfig({
         additionalData: `@import "@/styles/_variables.scss";`
       }
     }
+  },
+  optimizeDeps: {
+    esbuildOptions: {
+      target: 'es2020'
+    }
+  },
+  build: {
+    target: 'es2020'
   }
 })
