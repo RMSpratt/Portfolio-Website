@@ -24,10 +24,6 @@ if (props.sectionBody.Image) {
   imageFloat = sectionBody.Image.Float
   imageName = sectionBody.Image.Name
 }
-
-function getPath(srcPath: string) {
-  return new URL(`${LINK_SRC_PREFIX}${srcPath}`, import.meta.url).href
-}
 </script>
 
 <template>

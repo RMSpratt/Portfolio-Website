@@ -36,10 +36,6 @@ props.sectionBody.Media?.forEach(
     })
   }
 )
-
-function getPath(srcPath: string) {
-  return new URL(`${LINK_SRC_PREFIX}${srcPath}`, import.meta.url).href
-}
 </script>
 
 <template>
@@ -53,7 +49,7 @@ function getPath(srcPath: string) {
         <video v-if="mediaItem.MediaType == 'Video'" controls>
           <source :src="`${mediaItem.Name}`" type="video/mp4" />
         </video>
-        <img v-else :alt="mediaItem.AltText" :src="getPath(mediaItem.Name)" />
+        <img v-else :alt="mediaItem.AltText" :src="`${mediaItem.Name}`" />
         <p v-if="mediaItem.Caption" v-html="mediaItem.Caption"></p>
       </div>
     </div>
