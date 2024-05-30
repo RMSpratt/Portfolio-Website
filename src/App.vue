@@ -75,8 +75,17 @@ h3 {
   font-size: 1.25rem;
 }
 
+h4 {
+  font-size: 1rem;
+}
+
 em {
   font-size: 0.9rem;
+}
+
+p,
+li {
+  line-height: 1.25rem;
 }
 
 img {
@@ -98,6 +107,34 @@ video {
 @media screen and (max-width: 600px) {
   html {
     font-size: 12px;
+  }
+
+  p,
+  li {
+    line-height: 2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-align: center;
   }
 }
 </style>

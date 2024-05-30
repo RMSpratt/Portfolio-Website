@@ -45,7 +45,7 @@ function setActiveHeader(headerLabel: string) {
         v-bind:key="headingParagraph"
       ></p>
     </div>
-    <div class="subsection subsection-nav-header">
+    <div class="subsection subsection__navHeader">
       <div v-for="headerLabel in navHeaders" v-bind:key="headerLabel">
         <button
           type="button"
@@ -71,16 +71,16 @@ function setActiveHeader(headerLabel: string) {
   </div>
 </template>
 <style lang="scss">
-.subsection-nav-header {
+.subsection__navHeader {
   border-bottom: 2px solid $pageColor-darkest;
   display: flex;
   justify-content: first baseline;
   margin: 1.25rem 0px;
 
   div {
+    flex-grow: 1;
     margin: 0px 1%;
     text-align: left;
-    width: 18%;
   }
 
   div:hover button {

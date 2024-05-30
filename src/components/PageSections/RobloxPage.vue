@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import SectionBlock from './PageContent/SectionBlock.vue'
-
 import RobloxMain from '../../assets/Roblox/RobloxMain.json'
 </script>
 
@@ -11,4 +10,3 @@ import RobloxMain from '../../assets/Roblox/RobloxMain.json'
     </div>
   </div>
 </template>
-<style lang="scss"></style>

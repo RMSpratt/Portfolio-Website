@@ -11,16 +11,14 @@ let items = sectionBody.Items
 </script>
 
 <template>
-  <div>
-    <SubsectionHeader :heading-level="$props.headingLevel" :heading-text="header" />
-    <ul>
-      <li v-for="item in items" v-bind:key="item" v-html="item"></li>
-    </ul>
-  </div>
+  <SubsectionHeader :heading-level="$props.headingLevel" :heading-text="header" />
+  <ul>
+    <li v-for="item in items" v-bind:key="item" v-html="item"></li>
+  </ul>
 </template>
 <style>
 ul {
   list-style-position: outside;
-  padding-left: calc(1% + 0.5rem);
+  padding-left: calc(1% + 0.75rem);
 }
 </style>

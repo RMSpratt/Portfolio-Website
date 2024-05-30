@@ -9,14 +9,11 @@ let linkItems: [...any] = props.sectionBody.LinkItems || []
 </script>
 
 <template>
-  <div>
-    <SubsectionHeader :heading-level="$props.headingLevel" :heading-text="header" />
-    <div v-for="linkItem in linkItems" v-bind:key="linkItem.Id">
-      <label :for="linkItem.Id">
-        <strong>{{ linkItem.Label }}: </strong>
-        <a :href="linkItem.Href">{{ linkItem.LinkText }}</a>
-      </label>
-    </div>
+  <SubsectionHeader :heading-level="$props.headingLevel" :heading-text="header" />
+  <div v-for="linkItem in linkItems" v-bind:key="linkItem.Id">
+    <label :for="linkItem.Id">
+      <strong>{{ linkItem.Label }}: </strong>
+      <a :href="linkItem.Href">{{ linkItem.LinkText }}</a>
+    </label>
   </div>
 </template>
-<style></style>

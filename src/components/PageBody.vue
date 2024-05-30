@@ -19,33 +19,45 @@ defineProps(['activeSection'])
   display: flex;
   padding: 0 1%;
 
-  .page-section-main {
-    align-items: center;
-    flex-grow: 7.5;
-    max-width: 80%;
-    padding-right: 1%;
-  }
-
   .page-section-full {
     margin: 0px auto;
     width: 100%;
 
     .page-section-block {
       padding: calc(80 / 90) * 1% calc(80 / 90) * 1%;
-    }
-  }
+      background-color: $pageColor-medium;
+      border-radius: 10px 10px 0px 0px;
+      box-shadow: 0 5px 5px $pageColor-dark;
+      margin: 1.5rem 0;
+      padding: 1% 1%;
 
-  .page-section-side {
-    flex-grow: 2.5;
-    padding-left: 1%;
-    max-width: 20%;
+      transition: max-height 1s ease;
 
-    .page-section-block {
-      padding: 4% 4%;
-    }
+      h2 {
+        margin-bottom: 1rem;
+      }
 
-    h2 {
-      text-align: center;
+      h3 {
+        margin-bottom: 0.5rem;
+      }
+
+      .subsection {
+        p {
+          margin: 0.25rem 0px;
+        }
+
+        .subsection {
+          margin-bottom: 1rem;
+        }
+      }
+
+      .subsection:last-child {
+        margin-bottom: 0px;
+      }
+
+      .subsection-head-2 {
+        margin-bottom: 1.5rem;
+      }
     }
   }
 
@@ -53,39 +65,9 @@ defineProps(['activeSection'])
     border: 2px solid $pageColor-dark;
   }
 
-  .page-section-block {
-    background-color: $pageColor-medium;
-    border-radius: 10px 10px 0px 0px;
-    box-shadow: 0 5px 5px $pageColor-dark;
-    margin: 25px 0;
-    padding: 1% 1%;
-
-    transition: max-height 1s ease;
-
-    h2 {
-      margin-bottom: 1rem;
-    }
-
-    h3 {
-      margin-bottom: 0.5rem;
-    }
-
-    .subsection {
-      margin-bottom: 1.5rem;
-
-      p {
-        margin: 5px 0px;
-      }
-
-      .subsection {
-        margin-bottom: 1rem;
-      }
-    }
-
-    .subsection-head {
-      :last-child {
-        margin-bottom: 0px;
-      }
+  @media screen and (max-width: 600px) {
+    .subsection-head-2 {
+      margin-bottom: 3rem;
     }
   }
 }

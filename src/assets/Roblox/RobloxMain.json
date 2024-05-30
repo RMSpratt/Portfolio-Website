@@ -186,29 +186,6 @@
         ]
       },
       {
-        "NavHeader": "UI Programming",
-        "NavContent": [
-          {
-            "Type": "TextSection",
-            "Header": "Leaderboards",
-            "HeadingParagraphs": [
-              "A selection of some work in creating global leaderboards are highlighted below."
-            ],
-            "Subsections": [
-              {
-                "Type": "MediaGallerySection",
-                "Header": "Animations",
-                "Media": [
-                  {
-                    "Name": "Global-Leaderboard-Update.gif"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
         "NavHeader": "Miscellaneous",
         "NavContent": [
           {

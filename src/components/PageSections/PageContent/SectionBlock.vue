@@ -52,7 +52,7 @@ defineProps(['sectionBody'])
 }
 .page-section-block-inner {
   background-color: $pageColor-lightest;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 0.75rem 0.75rem 0px 0px;
   padding: 1% 1%;
 }
 </style>

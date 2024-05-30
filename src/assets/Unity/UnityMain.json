@@ -27,11 +27,11 @@
               {
                 "Type": "ImageSection",
                 "Image": {
-                  "Name": "Reap-The-Reward-Thumbnail.png",
-                  "Float": "Left"
+                  "Name": "Reap-The-Reward-Thumbnail.png"
                 },
                 "WrappedParagraphs": [
                   "Reap the Reward's level design was based on the 2D platformer <em>Wario Land 4</em> where the player must return to the start to complete each level.",
+                  "<br>",
                   "A blend of enemy combat and puzzle-solving allow the player to progress to the bottom of a dungeon to collect treasure."
                 ]
               },

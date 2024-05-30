@@ -3,24 +3,51 @@
     "Type": "TextSection",
     "Header": "Software Engineer & Game Developer",
     "HeadingParagraphs": [
-      "Hello! My name is Reed Spratt, and I am a working professional in the computer games industry.",
-      "I consider myself to be a passionate games researcher, designer, programmer, and tester, always striving to learn new skills and technologies.",
-      "Since 2019, I have been offering programming services as a freelancer while working on my own independent projects."
+      "Hello! Thank you for visiting. My name is Reed Spratt, and I primarily work in software and games development."
     ],
     "Subsections": [
       {
-        "Type": "ListSection",
-        "Header": "Research & Work Interests",
-        "Items": [
-          "Reusable Design of AI Frameworks",
-          "Creation of Editor Tools for Unity",
-          "Creation of Plugins for Roblox Studio",
-          "Implementation of Dynamic Music in Games"
+        "Type": "ImageSection",
+        "Image": {
+          "Name": "Pfp.jpg",
+          "Class": "profile-image",
+          "Float": "Right"
+        },
+        "WrappedParagraphs": [
+          "My work is primarily based in programming and systems design, but I also enjoy UI and level design. My current focus for new projects is based in games research and programming.",
+          "<br>",
+          "I have been programming professionally and independently since 2016. My most proficient languages in-order of experience are: C, Lua, Python, JavaScript, C#, and C++.",
+          "<br>",
+          "My game engine of choice for development is Roblox Studio. I have spent just over thirteen years using the Roblox platform and four years there programming. More recently, I have been working in Unity for the creation of games and custom editor tools for development."
+        ]
+      },
+      {
+        "Type": "LinkSection",
+        "Header": "Contact",
+        "LinkItems": [
+          {
+            "Id": "Github-Link",
+            "Label": "Github",
+            "Href": "https://github.com/RMSpratt",
+            "LinkText": "RMSpratt"
+          },
+          {
+            "Id": "LinkedIn-Link",
+            "Label": "LinkedIn",
+            "Href": "https://www.linkedin.com/in/reed-spratt-695818165/",
+            "LinkText": "Reed Spratt"
+          },
+          {
+            "Id": "Email-Link",
+            "Label": "Email",
+            "Href": "mailto:reedsprattdev@gmail.com",
+            "LinkText": "Mail: Reed Spratt"
+          }
         ]
       }
     ],
     "FooterParagraphs": [
-      "A selection of my recent work can be found on the other pages linked above, or on my Github linked to the right."
+      "A selection of my past works can be found by using the navigation links at the top-right of the page."
     ]
   },
   {
@@ -133,6 +160,15 @@
               "My specializations included: music recommender systems, character AI for games, relational databases, and unstructured data processing."
             ]
           }
+        ]
+      },
+      {
+        "Type": "ListSection",
+        "Header": "Focus for Work & Research",
+        "Items": [
+          "Designing Hybrid AI Frameworks for Believable Character Behaviours",
+          "Building Editor Tools to Streamline Development for Non-Programmers",
+          "Implementing Dynamic Music Changes Programmatically"
         ]
       },
       {

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import SectionBlock from './PageContent/SectionBlock.vue'
-
 import UnityMain from '../../assets/Unity/UnityMain.json'
 </script>
 
@@ -11,4 +10,3 @@ import UnityMain from '../../assets/Unity/UnityMain.json'
     </div>
   </div>
 </template>
-<style lang="scss"></style>

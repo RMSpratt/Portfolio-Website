@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-let pageNavHeadings: string[] = ['About', 'Roblox', 'Unity', 'Web', 'Research']
+let pageNavHeadings: string[] = ['About', 'Roblox', 'Unity', 'Research']
 let activePageNavHeading = ref(pageNavHeadings[0])
 
 defineProps(['pageTitle'])
@@ -49,20 +49,27 @@ function setActivePageNav(pageNavHeading: string) {
 #headerNav {
   display: flex;
   flex-grow: 4;
-  justify-content: right;
+  justify-content: center;
 }
 
 #headerNav > div {
-  width: 25%;
+  flex-grow: 1;
+  margin: 0px 2%;
 
   button {
     margin: 0px auto;
-    width: 100%;
+    width: 90%;
   }
 }
 
 #headerNav > div:hover button {
   cursor: pointer;
   font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  #header {
+    flex-direction: column;
+  }
 }
 </style>

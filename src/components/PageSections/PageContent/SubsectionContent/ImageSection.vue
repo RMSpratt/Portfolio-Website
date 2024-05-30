@@ -15,12 +15,14 @@ let wrappedParagraphs: string[] = props.sectionBody.WrappedParagraphs
 
 let imageAltText: string = ''
 let imageClass: string = ''
+let imageFloat: string = ''
 let imageName: string = ''
 
 if (props.sectionBody.Image) {
   imageAltText = props.sectionBody.Image.AltText
-  imageName = sectionBody.Image.Name
   imageClass = sectionBody.Image.Class || ''
+  imageFloat = sectionBody.Image.Float
+  imageName = sectionBody.Image.Name
 }
 
 function getPath(srcPath: string) {
@@ -34,7 +36,7 @@ function getPath(srcPath: string) {
     <div class="subsection" v-if="headingParagraphs != null">
       <p v-for="hp in headingParagraphs" v-html="hp" v-bind:key="hp"></p>
     </div>
-    <div class="image-container">
+    <div :class="imageFloat == 'Right' ? 'image-container-reverse' : 'image-container'">
       <img v-if="imageName" :src="getPath(imageName)" :alt="imageAltText" :class="imageClass" />
       <div class="subsection" v-if="wrappedParagraphs != null">
         <p v-for="wp in wrappedParagraphs" v-html="wp" v-bind:key="wp"></p>
@@ -46,30 +48,38 @@ function getPath(srcPath: string) {
   </div>
 </template>
 <style lang="scss">
-.image-container {
+.image-container,
+.image-container-reverse {
   display: flex;
+  justify-content: space-between;
 
   img {
-    margin: 0px 10px 0px 0px;
+    align-self: center;
+    margin: 0px 0.75rem 0px 0px;
   }
 
+  .profile-image {
+    border-radius: 10%;
+    max-height: 12rem;
+    width: auto;
+  }
   // Special Image Classes
   .side-image {
     border-radius: 10%;
     display: flex;
     height: auto;
-    margin: 20px auto;
+    margin: 1rem auto;
     width: 80%;
     max-width: 250px;
-  }
-
-  .image-right {
-    margin: 0px 0px 0px 10px;
   }
 }
 
 .image-container-reverse {
   flex-direction: row-reverse;
+
+  img {
+    margin: 0px 0px 0px 0.75rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -78,7 +88,7 @@ function getPath(srcPath: string) {
     flex-direction: column;
 
     img {
-      margin: 0px 0px 10px 0px;
+      margin: 0px 0px 0.75rem 0px;
     }
   }
 }

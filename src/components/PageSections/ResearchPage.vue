@@ -10,4 +10,3 @@ import SectionBlock from './PageContent/SectionBlock.vue'
     </div>
   </div>
 </template>
-<style lang="scss"></style>

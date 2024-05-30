@@ -20,7 +20,7 @@ let subsections: [...any] = sectionBody.Subsections || []
 </script>
 
 <template>
-  <div :class="headingLevel == 2 ? 'subsection-head' : 'subsection'">
+  <div :class="'subsection subsection-head-' + headingLevel">
     <SubsectionHeader :heading-level="$props.headingLevel" :heading-text="header" />
 
     <div class="subsection" v-if="headingParagraphs != null">
@@ -28,7 +28,11 @@ let subsections: [...any] = sectionBody.Subsections || []
     </div>
 
     <!-- Recursively build subsections -->
-    <div class="subsection" v-for="sp in subsections" v-bind:key="sp">
+    <div
+      :class="'subsection subsection-head-' + (headingLevel + 1)"
+      v-for="sp in subsections"
+      v-bind:key="sp"
+    >
       <TextSection
         v-if="sp.Type == 'TextSection'"
         :section-body="sp"
@@ -66,4 +70,3 @@ let subsections: [...any] = sectionBody.Subsections || []
     </div>
   </div>
 </template>
-<style lang="scss"></style>
